@@ -4,7 +4,7 @@ date: 2023-03-04T09:13:17Z
 draft: false
 ---
 
-![Muizz Lateef](https://miro.medium.com/v2/resize:fill:96:96/1*yxIe8-6_XTgjMz8NZdewDA.jpeg)
+![Muizz Lateef](https://media.licdn.com/dms/image/D4E03AQF0hWN2FJ4PYQ/profile-displayphoto-shrink_200_200/0/1677924687830?e=1683158400&v=beta&t=X43awZ5mWwy1rHyx1pMuqRFTw_3ll1rVOVRFJznT_CY)
 
 
 
