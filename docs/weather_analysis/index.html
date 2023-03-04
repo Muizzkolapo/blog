@@ -472,9 +472,9 @@ lapply(Tmean, get_season,seas_param=winter)-&gt;win_mons
 }
 </code></pre><pre tabindex="0"><code>plot(merge_avg_all(win_mons),main=&#34;Average Winter Temperature Trend&#34;,xlab=&#34;Year&#34;,ylab=&#34;Mean Temperature&#34;)
 plot(merge_avg_all(sum_mons),main=&#34;Average Summer Temperature Trend&#34;,xlab=&#34;Year&#34;,ylab=&#34;Mean Temperature&#34;)
-</code></pre><p><img loading="lazy" src="download.png" alt="Temp1"  />
+</code></pre><p><img loading="lazy" src="/docs/download.png" alt="Temp1"  />
 
-<img loading="lazy" src="download1.png" alt="Temp2"  />
+<img loading="lazy" src="/docs/download1.png" alt="Temp2"  />
 </p>
 <h3 id="4----trend-and-seasonality-estimation">4 &ndash; Trend and Seasonality Estimation<a hidden class="anchor" aria-hidden="true" href="#4----trend-and-seasonality-estimation">#</a></h3>
 <p>We created a function to subset the time series data For each district,
@@ -689,13 +689,13 @@ the plots for the different regions, while Northern Ireland has a more
 stable trend, we can see that England_E_and_NE and East_Anglia do have
 some cubic trend.</p>
 <pre tabindex="0"><code>plot_model(Tmax_2019$England_E_and_NE,time.all,&#34;Trend of Average monthly maximum temperature England_E_and_NE&#34;)
-</code></pre><p><img loading="lazy" src="trend.png" alt="trend"  />
+</code></pre><p><img loading="lazy" src="/docs/trend.png" alt="trend"  />
 </p>
 <pre tabindex="0"><code>plot_model(Tmax_2019$East_Anglia,time.all,&#34;Trend of Average monthly maximum temperature East_Anglia&#34;)
-</code></pre><p><img loading="lazy" src="trend1.png" alt="trend1"  />
+</code></pre><p><img loading="lazy" src="/docs/trend1.png" alt="trend1"  />
 </p>
 <pre tabindex="0"><code>plot_model(Tmax_2019$Northern_Ireland,time.all,&#34;Trend of Average monthly maximum temperature Northern_Ireland&#34;)
-</code></pre><p><img loading="lazy" src="trend2.png" alt="trend2"  />
+</code></pre><p><img loading="lazy" src="/docs/trend2.png" alt="trend2"  />
 </p>
 <h3 id="43-estimating-seasonality-using-seasonal-means-and-harmonic-models">4.3 Estimating seasonality using seasonal means and harmonic models<a hidden class="anchor" aria-hidden="true" href="#43-estimating-seasonality-using-seasonal-means-and-harmonic-models">#</a></h3>
 <h6 id="431-removing-trend-using-averaging">4.3.1 removing Trend using averaging<a hidden class="anchor" aria-hidden="true" href="#431-removing-trend-using-averaging">#</a></h6>
@@ -748,7 +748,7 @@ lapply(Tmax_2019_ln, return_month_avg, model_type = &#34;l_model&#34;) %&gt;% se
 lapply(Tmax_2019_cubic, return_month_avg, model_type = &#34;c_model&#34;) %&gt;% set_names(names(Tmax_2019_cubic)) -&gt; Tmean_monthly_avg_cubic
 </code></pre><h6 id="sample-monthly-average-for-northern-ireland">Sample monthly average for Northern Ireland<a hidden class="anchor" aria-hidden="true" href="#sample-monthly-average-for-northern-ireland">#</a></h6>
 <pre tabindex="0"><code>Tmin_monthly_avg$Northern_Ireland
-</code></pre><p><img loading="lazy" src="seasmean.png" alt="seasmean"  />
+</code></pre><p><img loading="lazy" src="/docs/seasmean.png" alt="seasmean"  />
 </p>
 <h6 id="432-estimate-seasonality-with-seasonal-average">4.3.2 Estimate seasonality with seasonal average<a hidden class="anchor" aria-hidden="true" href="#432-estimate-seasonality-with-seasonal-average">#</a></h6>
 <p>The seasonality was estimated using the seasonal means method. We
@@ -1270,7 +1270,7 @@ lapply(districts, get_min_AIC, y = Tmin_harm_final, z = Tmin_seas_est) %&gt;% se
 best_model_TMIN %&gt;% as.data.frame() %&gt;%  t() %&gt;%  as.data.frame() -&gt;Tmin.best
 names(Tmin.best)[1] &lt;- &#34;Best Model Tmin&#34;
 Tmin.best
-</code></pre><p><img loading="lazy" src="tmin.png" alt="tmin"  />
+</code></pre><p><img loading="lazy" src="/docs/tmin.png" alt="tmin"  />
 </p>
 <h5 id="all-tmean">ALl TMEAN<a hidden class="anchor" aria-hidden="true" href="#all-tmean">#</a></h5>
 <p>We used the do.call function to re-combine our different configurations
@@ -1288,7 +1288,7 @@ lapply(districts, get_min_AIC, y = Tmean_harm_final, z = Tmean_seas_est) %&gt;% 
 best_model_TMean %&gt;% as.data.frame() %&gt;%  t() %&gt;%  as.data.frame() -&gt; Tmean.best
 names(Tmean.best)[1] &lt;- &#34;Best Models Tmean&#34;
 Tmean.best
-</code></pre><p><img loading="lazy" src="tmean.png" alt="tmean"  />
+</code></pre><p><img loading="lazy" src="/docs/tmean.png" alt="tmean"  />
 </p>
 <h5 id="all-tmax">ALL Tmax<a hidden class="anchor" aria-hidden="true" href="#all-tmax">#</a></h5>
 <p>We combined the time series with a linear trend into a single list and
@@ -1316,7 +1316,7 @@ best_model_TMax_cubic %&gt;% as.data.frame() %&gt;%  t() %&gt;% as.data.frame() 
 names(Tmax.cb.best)[1] &lt;- &#34;Best Models Tmax&#34;
 
 rbind.data.frame(Tmax.ln.best,Tmax.cb.best)
-</code></pre><p><img loading="lazy" src="tmax.png" alt="tmax"  />
+</code></pre><p><img loading="lazy" src="/docs/tmax.png" alt="tmax"  />
 </p>
 <p>We used the unique function to check the unique best models for each
 group of our time series and we can see we have 5 different best models
@@ -2013,9 +2013,9 @@ test model performed better than the final model according to the rmse
 figures in the tables below.</p>
 <pre tabindex="0"><code>get_all_rmse(Tmin_accuracy,Tmean_accuracy,Tmax_accuracy) 
 </code></pre><pre tabindex="0"><code>get_all_rmse(Tmin_accuracy_test,Tmean_accuracy_test,Tmax_accuracy_test) 
-</code></pre><p><img loading="lazy" src="compare1.png" alt="compare1"  />
+</code></pre><p><img loading="lazy" src="/docs/compare1.png" alt="compare1"  />
 
-<img loading="lazy" src="compare2.png" alt="compare2"  />
+<img loading="lazy" src="/docs/compare2.png" alt="compare2"  />
 </p>
 <p>We focused our analysis on the values from the test model predictions,
 final model predictions and the actual predictions for the South wales
@@ -2027,9 +2027,9 @@ Tmin_final_predictions$England_NW_and_N_Wales %&gt;%  as.data.frame() %&gt;% set
 Tmin$England_NW_and_N_Wales %&gt;% window(start = 2020) -&gt; England_NW_and_N_Wales_actual
 England_NW_and_N_Wales_actual %&gt;% as.data.frame()%&gt;%  set_names(&#34;Actual&#34;) -&gt; actual_N_wales
 cbind.data.frame(test_N_wales,final_N_wales,actual_N_wales)
-</code></pre><p><img loading="lazy" src="compare4.png" alt="compare3"  />
+</code></pre><p><img loading="lazy" src="/docs/compare4.png" alt="compare3"  />
 
-<img loading="lazy" src="compare4.png" alt="compare4"  />
+<img loading="lazy" src="/docs/compare4.png" alt="compare4"  />
 </p>
 <pre tabindex="0"><code>Tmin_test_pred$England_SW_and_S_Wales %&gt;%  as.data.frame()  %&gt;% set_names(&#34;test_predictions&#34;)-&gt; test_S_wales
 Tmin_final_predictions$England_SW_and_S_Wales %&gt;%  as.data.frame() %&gt;% set_names(&#34;final_predictions&#34;) -&gt; final_S_wales
@@ -2043,7 +2043,7 @@ plot(actual_N_wales,main = &#34;Actual North wales&#34;)
 plot(test_S_wales,main = &#34;Test predictions South wales&#34;)
 plot(final_S_wales,main = &#34;Final predictions South wales&#34;)
 plot(actual_S_wales,main = &#34;Actual predictions South wales&#34;)
-</code></pre><p><img loading="lazy" src="final.png" alt="final"  />
+</code></pre><p><img loading="lazy" src="/docs/final.png" alt="final"  />
 </p>
 
 
