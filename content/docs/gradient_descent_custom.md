@@ -7,7 +7,8 @@ draft: false
 Applying the gradient descent algorithm to find the minimum of the following function of four
 variables
 
-$f(x, y, z, w) = \frac{1}{4}(2-x)^2 + (3y-5)^4 + e^{2z^4 + w^2}$
+<!-- $f(x, y, z, w) = \frac{1}{4}(2-x)^2 + (3y-5)^4 + e^{2z^4 + w^2}$ --> 
+graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/functions.png?raw=true)
 
 #### Introduction
 
@@ -33,10 +34,18 @@ This process is repeated until the cost of the parameters close to zero or minim
 **Finding the partial derivative of independent variables in equation above** <br/>
 
 we will be applying the partial derivative, power rule and chain rule to the function above.
-$$\frac{d(f(x, y, z, w))}{{dx}} = (x-2)/2 $$
-$$\frac{d(f(x, y, z, w))}{{dy}} = 12((3y)-5)^3 $$
-$$\frac{d(f(x, y, z, w))}{{dz}} = (8z^3)e^{2z^4 + w^2} $$
-$$\frac{d(f(x, y, z, w))}{{dz}} = (2w)e^{2z^4 + w^2} $$
+<!-- $$\frac{d(f(x, y, z, w))}{{dx}} = (x-2)/2 $$ --> 
+graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/functions.png?raw=true)
+<!-- $$\frac{d(f(x, y, z, w))}{{dy}} = 12((3y)-5)^3 $$ --> 
+graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/derived1.png?raw=true)
+<!-- $$\frac{d(f(x, y, z, w))}{{dz}} = (8z^3)e^{2z^4 + w^2} $$ --> 
+graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/derived2.png?raw=true)
+<!-- $$\frac{d(f(x, y, z, w))}{{dz}} = (2w)e^{2z^4 + w^2} $$ --> 
+graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/derived3.png?raw=true)
+
+
+
+
 
 After finding the derivative of the function with respect to each element in the equation, we  created a function "fun" which returns the result of the original equation whenever we give it inputs as argument. We then proceeded to create a function for each of the partial derivatives as this would be used when implementing the gradient descent algorithm. We added a tolerance of 0.01 and step seize of 0.03.
 
