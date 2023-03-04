@@ -27,4 +27,4 @@ capturing the underlying data distribution for the CIFAR100 dataset but performe
 for the custom music dataset provided by Breathe Music using the statistical probability
 distribution plot, and Fr´echet Inception Score (FID) metric.
 
-[Read Paper](https://github.com/Muizzkolapo/masters-dissertation/blob/main/Muizz%20Lateef%20Dissertation.pdf){: .btn}
+[Read Paper](https://github.com/Muizzkolapo/masters-dissertation/blob/main/Muizz%20Lateef%20Dissertation.pdf)
