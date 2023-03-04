@@ -1,13 +1,15 @@
-<img src="https://media.licdn.com/dms/image/D4E03AQF0hWN2FJ4PYQ/profile-displayphoto-shrink_200_200/0/1677924687830?e=1683158400&v=beta&t=X43awZ5mWwy1rHyx1pMuqRFTw_3ll1rVOVRFJznT_CY" alt="alt text" style="border-radius:50%;">
-
-
 ---
 title: "Knowledge_graphs"
 date: 2023-03-04T09:13:17Z
 draft: false
 ---
 
+![Muizz Lateef](https://miro.medium.com/v2/resize:fill:96:96/1*yxIe8-6_XTgjMz8NZdewDA.jpeg)
 
+
+
+
+An Introduction to Knowledge Graphs
 ===================================
 
 Understanding how to work with knowledge graphs can give data scientists the ability to not just extract interrelated facts and assumptions from massive collections of data, but can also help in understanding how to form contextual connections and understanding from data via linking and semantic metadata which helps provide a unified approach to data analytics and intelligence. This article is an introduction to knowledge graphs, important concepts and their applications.
