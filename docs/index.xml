@@ -44,5 +44,17 @@
       <description>Abstract The high impact of road transport on the environment calls for both scientific and social policies to control carbon and greenhouse gas emissions. The goal of this research is to study cars and taxis as a top contributor to CO2 emissions and reiterate the importance of putting policies in place to reduce car use. The CO, CO2 and greenhouse gas emissions were assessed in relation to local, national and International emissions.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://muizzkolapo.github.io/blog/docs/twitter_airline_data_mining/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://muizzkolapo.github.io/blog/docs/twitter_airline_data_mining/</guid>
+      <description>title: &amp;ldquo;Twitter data mining of airline related tweets&amp;rdquo; date: 2023-03-04T09:13:17Z draft: false
+ReadMe
+(1) For optimum performance of the code below ensure the following packages and libraries are installed and loaded to your Workspace.
+tidytext stringr tidytext textdata stats reshape2 modeltools topicmodels tm widyr anytime rtweet leaflet lubridate lutz glue scales twitteR wordcloud igraph ggraph Ensure you run the code from Top to bottom as the content of the variable might change depending on the line of code been worked on.</description>
+    </item>
+    
   </channel>
 </rss>
