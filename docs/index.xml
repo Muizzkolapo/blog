@@ -25,5 +25,15 @@
       <description>Abstract Generative Adversarial Networks (GAN) have seen great improvement in modelling synthetic data with results unparalleled in the field of deep learning. This research explores data augmentation for cover song identification by extending state-of-the-art GAN frameworks used in image processing to cover song identification. Research in this domain is still in the early phases, this work explores the implementation of a GAN model capable of generating new features for cover song identification.</description>
     </item>
     
+    <item>
+      <title>Open Learning University Data Analysis</title>
+      <link>https://muizzkolapo.github.io/blog/docs/learning_anallytics/analysis/</link>
+      <pubDate>Sat, 04 Mar 2023 09:13:17 +0000</pubDate>
+      
+      <guid>https://muizzkolapo.github.io/blog/docs/learning_anallytics/analysis/</guid>
+      <description>The code above is to help format the notebook and make the outputs appear inline and within the document.
+1.0 Data Preprocessing This is to load all the modules to be used in this analysis. The os module provides a way to interact with the Os of the machine, the glob module is used to retrieve the path names needed. Pandas,Numpy, Seaborn, Matplotlib.pyplot and Folium are modules used to interact with the dataset and plot visualizations.</description>
+    </item>
+    
   </channel>
 </rss>
