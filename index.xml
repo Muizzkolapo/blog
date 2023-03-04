@@ -35,5 +35,14 @@
 1.0 Data Preprocessing This is to load all the modules to be used in this analysis. The os module provides a way to interact with the Os of the machine, the glob module is used to retrieve the path names needed. Pandas,Numpy, Seaborn, Matplotlib.pyplot and Folium are modules used to interact with the dataset and plot visualizations.</description>
     </item>
     
+    <item>
+      <title>The Impact and Benefits of Car-Free Day on the Rhondda Cynon Taf Borough Using Statistical Evidence</title>
+      <link>https://muizzkolapo.github.io/blog/docs/pullution/</link>
+      <pubDate>Sat, 04 Mar 2023 09:13:17 +0000</pubDate>
+      
+      <guid>https://muizzkolapo.github.io/blog/docs/pullution/</guid>
+      <description>Abstract The high impact of road transport on the environment calls for both scientific and social policies to control carbon and greenhouse gas emissions. The goal of this research is to study cars and taxis as a top contributor to CO2 emissions and reiterate the importance of putting policies in place to reduce car use. The CO, CO2 and greenhouse gas emissions were assessed in relation to local, national and International emissions.</description>
+    </item>
+    
   </channel>
 </rss>
