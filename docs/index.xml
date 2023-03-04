@@ -5,15 +5,15 @@
     <link>https://muizzkolapo.github.io/blog/docs/</link>
     <description>Recent content in Docs on Muizzkolapo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://muizzkolapo.github.io/blog/docs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Mar 2023 09:13:17 +0000</lastBuildDate><atom:link href="https://muizzkolapo.github.io/blog/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>Knowledge_graphs</title>
       <link>https://muizzkolapo.github.io/blog/docs/knowledge_graphs/knowledge_graphs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Mar 2023 09:13:17 +0000</pubDate>
       
       <guid>https://muizzkolapo.github.io/blog/docs/knowledge_graphs/knowledge_graphs/</guid>
-      <description>title: &amp;ldquo;An Introduction to Knowledge Graphs&amp;rdquo; date: 2023-03-04T09:13:17Z draft: false ===================================
-Understanding how to work with knowledge graphs can give data scientists the ability to not just extract interrelated facts and assumptions from massive collections of data, but can also help in understanding how to form contextual connections and understanding from data via linking and semantic metadata which helps provide a unified approach to data analytics and intelligence. This article is an introduction to knowledge graphs, important concepts and their applications.</description>
+      <description>An Introduction to Knowledge Graphs Understanding how to work with knowledge graphs can give data scientists the ability to not just extract interrelated facts and assumptions from massive collections of data, but can also help in understanding how to form contextual connections and understanding from data via linking and semantic metadata which helps provide a unified approach to data analytics and intelligence. This article is an introduction to knowledge graphs, important concepts and their applications.</description>
     </item>
     
   </channel>
