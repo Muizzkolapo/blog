@@ -16,5 +16,14 @@
       <description>Understanding how to work with knowledge graphs can give data scientists the ability to not just extract interrelated facts and assumptions from massive collections of data, but can also help in understanding how to form contextual connections and understanding from data via linking and semantic metadata which helps provide a unified approach to data analytics and intelligence. This article is an introduction to knowledge graphs, important concepts and their applications.</description>
     </item>
     
+    <item>
+      <title>Data Augmentation for Cover Song Identification Systems Using Generative Adversarial Networks</title>
+      <link>https://muizzkolapo.github.io/blog/docs/gan_music/</link>
+      <pubDate>Sat, 04 Mar 2023 09:13:17 +0000</pubDate>
+      
+      <guid>https://muizzkolapo.github.io/blog/docs/gan_music/</guid>
+      <description>Abstract Generative Adversarial Networks (GAN) have seen great improvement in modelling synthetic data with results unparalleled in the field of deep learning. This research explores data augmentation for cover song identification by extending state-of-the-art GAN frameworks used in image processing to cover song identification. Research in this domain is still in the early phases, this work explores the implementation of a GAN model capable of generating new features for cover song identification.</description>
+    </item>
+    
   </channel>
 </rss>
