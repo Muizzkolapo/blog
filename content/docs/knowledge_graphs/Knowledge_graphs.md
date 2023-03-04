@@ -14,7 +14,7 @@ An Introduction to Knowledge Graphs
 
 Understanding how to work with knowledge graphs can give data scientists the ability to not just extract interrelated facts and assumptions from massive collections of data, but can also help in understanding how to form contextual connections and understanding from data via linking and semantic metadata which helps provide a unified approach to data analytics and intelligence. This article is an introduction to knowledge graphs, important concepts and their applications.
 
-![graph](graphs.jpeg)
+![graph]([graphs.jpeg](https://miro.medium.com/v2/resize:fit:720/format:webp/1*4BzZa8ginHQ_9dcWEzb11g.jpeg))
 
 Photo by [Jason Weingardt](https://unsplash.com/@jasonw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on Unsplash
 
