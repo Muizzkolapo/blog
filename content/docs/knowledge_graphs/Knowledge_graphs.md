@@ -4,9 +4,6 @@ date: 2023-03-04T09:13:17Z
 draft: false
 ---
 
-![Muizz Lateef](https://miro.medium.com/v2/resize:fill:96:96/1*yxIe8-6_XTgjMz8NZdewDA.jpeg)
-
-
 
 
 An Introduction to Knowledge Graphs
