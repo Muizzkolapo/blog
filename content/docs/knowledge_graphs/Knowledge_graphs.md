@@ -1,13 +1,13 @@
 ---
-title: "Knowledge_graphs"
+title: "An Introduction to Knowledge Graphs"
 date: 2023-03-04T09:13:17Z
 draft: false
 ---
 
 
 
-An Introduction to Knowledge Graphs
-===================================
+
+
 
 Understanding how to work with knowledge graphs can give data scientists the ability to not just extract interrelated facts and assumptions from massive collections of data, but can also help in understanding how to form contextual connections and understanding from data via linking and semantic metadata which helps provide a unified approach to data analytics and intelligence. This article is an introduction to knowledge graphs, important concepts and their applications.
 
