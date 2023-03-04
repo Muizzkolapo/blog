@@ -318,7 +318,7 @@ fig = go.Figure(data =
     ))
 fig.show()
 ```
-![graph](plotly1)
+![graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/newplot.png?raw=true)
 
 
 
@@ -335,7 +335,7 @@ fig = go.Figure(data =
     ))
 fig.show()
 ```
-![graph](plotly2)
+![graph](https://github.com/Muizzkolapo/blog/blob/main/content/docs/newplot%20(1).png?raw=true)
 
 
 ```python
@@ -373,7 +373,7 @@ fig.update_layout(showlegend=False,
 
 fig.show()
 ```
-![graph](plotly2)
+![graph](https://raw.githubusercontent.com/Muizzkolapo/blog/main/content/docs/newplot%20(3).png)
 
 #### Results
 Visualizing the outcome of the implementation of the gradient descent algorithm we can observe that gradient descent was able to find the parameters that minimizes the cost function, we used random initialization for selecting the initial starting points to avoid the saturation of our cost function as we observed that using zero initialization makes it impossible for the gradient descent algorithm to update the parameters z and w. The plot for the path taken by the algorithm for the simulataneus update for all the parameters is different but we can observe they all converge at the same value of the cost function regardless of the path taken.The visualization showed that the path taken by variables x and y is different to that which z and w took, but we observe that they all eventually converge at the local optima. 
