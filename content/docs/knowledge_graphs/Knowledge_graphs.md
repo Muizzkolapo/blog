@@ -1,11 +1,6 @@
-<style>
-img {
-  border-radius: 50%;
-}
-</style>
+<img src="i[mage-url.jpg](https://media.licdn.com/dms/image/D4E03AQF0hWN2FJ4PYQ/profile-displayphoto-shrink_200_200/0/1677924687830?e=1683158400&v=beta&t=X43awZ5mWwy1rHyx1pMuqRFTw_3ll1rVOVRFJznT_CY)" alt="alt text" style="border-radius:50%;">
 
 
-![Muizz Lateef](https://media.licdn.com/dms/image/D4E03AQF0hWN2FJ4PYQ/profile-displayphoto-shrink_200_200/0/1677924687830?e=1683158400&v=beta&t=X43awZ5mWwy1rHyx1pMuqRFTw_3ll1rVOVRFJznT_CY)
 
 ---
 title: "An Introduction to Knowledge Graphs"
