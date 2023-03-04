@@ -343,8 +343,8 @@ merge_avg_all <- function(season_mons) {
 plot(merge_avg_all(win_mons),main="Average Winter Temperature Trend",xlab="Year",ylab="Mean Temperature")
 plot(merge_avg_all(sum_mons),main="Average Summer Temperature Trend",xlab="Year",ylab="Mean Temperature")
 ```
-![Temp1](download.png)
-![Temp2](download1.png)
+![Temp1](/docs/download.png)
+![Temp2](/docs/download1.png)
 
 ### 4 -- Trend and Seasonality Estimation
 
@@ -610,17 +610,17 @@ some cubic trend.
 ```{r, echo = FALSE}
 plot_model(Tmax_2019$England_E_and_NE,time.all,"Trend of Average monthly maximum temperature England_E_and_NE")
 ```
-![trend](trend.png)
+![trend](/docs/trend.png)
 
 ```{r, echo = FALSE}
 plot_model(Tmax_2019$East_Anglia,time.all,"Trend of Average monthly maximum temperature East_Anglia")
 ```
-![trend1](trend1.png)
+![trend1](/docs/trend1.png)
 
 ```{r, echo = FALSE}
 plot_model(Tmax_2019$Northern_Ireland,time.all,"Trend of Average monthly maximum temperature Northern_Ireland")
 ```
-![trend2](trend2.png)
+![trend2](/docs/trend2.png)
 
 ### 4.3 Estimating seasonality using seasonal means and harmonic models
 
@@ -688,7 +688,7 @@ lapply(Tmax_2019_cubic, return_month_avg, model_type = "c_model") %>% set_names(
 ```{r, echo = FALSE}
 Tmin_monthly_avg$Northern_Ireland
 ```
-![seasmean](seasmean.png)
+![seasmean](/docs/seasmean.png)
 
 ###### 4.3.2 Estimate seasonality with seasonal average
 
@@ -1302,7 +1302,7 @@ best_model_TMIN %>% as.data.frame() %>%  t() %>%  as.data.frame() ->Tmin.best
 names(Tmin.best)[1] <- "Best Model Tmin"
 Tmin.best
 ```
-![tmin](tmin.png)
+![tmin](/docs/tmin.png)
 
 ##### ALl TMEAN
 
@@ -1324,7 +1324,7 @@ best_model_TMean %>% as.data.frame() %>%  t() %>%  as.data.frame() -> Tmean.best
 names(Tmean.best)[1] <- "Best Models Tmean"
 Tmean.best
 ```
-![tmean](tmean.png)
+![tmean](/docs/tmean.png)
 
 ##### ALL Tmax
 
@@ -1357,7 +1357,7 @@ names(Tmax.cb.best)[1] <- "Best Models Tmax"
 rbind.data.frame(Tmax.ln.best,Tmax.cb.best)
 
 ```
-![tmax](tmax.png)
+![tmax](/docs/tmax.png)
 
 We used the unique function to check the unique best models for each
 group of our time series and we can see we have 5 different best models
@@ -2197,8 +2197,8 @@ get_all_rmse(Tmin_accuracy,Tmean_accuracy,Tmax_accuracy)
 ```{r, echo = FALSE}
 get_all_rmse(Tmin_accuracy_test,Tmean_accuracy_test,Tmax_accuracy_test) 
 ```
-![compare1](compare1.png)
-![compare2](compare2.png)
+![compare1](/docs/compare1.png)
+![compare2](/docs/compare2.png)
 
 We focused our analysis on the values from the test model predictions,
 final model predictions and the actual predictions for the South wales
@@ -2213,8 +2213,8 @@ Tmin$England_NW_and_N_Wales %>% window(start = 2020) -> England_NW_and_N_Wales_a
 England_NW_and_N_Wales_actual %>% as.data.frame()%>%  set_names("Actual") -> actual_N_wales
 cbind.data.frame(test_N_wales,final_N_wales,actual_N_wales)
 ```
-![compare3](compare4.png)
-![compare4](compare4.png)
+![compare3](/docs/compare4.png)
+![compare4](/docs/compare4.png)
 
 
 ```{r, echo = FALSE}
@@ -2236,4 +2236,4 @@ plot(actual_S_wales,main = "Actual predictions South wales")
 ```
 
 
-![final](final.png)
+![final](/docs/final.png)
