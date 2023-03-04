@@ -11,10 +11,9 @@ params:
   homeInfoParams:
     Title: "Some data guy"
     Content: >
-    ![sample](muizz.JPG)
       Welcome to the **Random musings of a data guy** 🎉
 
-      - 
+      - ![sample](muizz.JPG)
 
       - Things I generally think about:
 
