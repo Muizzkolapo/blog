@@ -5,7 +5,7 @@ theme: PaperMod
 
 
 enableEmoji: true
-
+math: true
 params:
   author: Muizz Kolapo
   homeInfoParams:
