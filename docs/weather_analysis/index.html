@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>UK Weather Time series analysis | Muizzkolapo</title>
+<meta name="keywords" content="">
+<meta name="description" content="Abstract Forecasting temperature by the use of advance statistical tools is very important in understanding and dealing with the effects of rising or decreasing temperatures. This study uses Time series analysis and predictions, a statistical methods to analyze and forecast temperatures, by using the average max, min and mean temperature for each month of different regions in the United Kingdom measured by the Met Office. The increase in concerns about the effects of rising or decreasing temperature on humans, animals, the climate, oceans, and seasonal patterns provokes the need for accurate models for forecasting the temperatures of the different regions across the globe.">
+<meta name="author" content="Muizz Kolapo">
+<link rel="canonical" href="https://muizzkolapo.github.io/blog/docs/weather_analysis/">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/blog/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://muizzkolapo.github.io/blog/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://muizzkolapo.github.io/blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://muizzkolapo.github.io/blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://muizzkolapo.github.io/blog/apple-touch-icon.png">
+<link rel="mask-icon" href="https://muizzkolapo.github.io/blog/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="UK Weather Time series analysis" />
+<meta property="og:description" content="Abstract Forecasting temperature by the use of advance statistical tools is very important in understanding and dealing with the effects of rising or decreasing temperatures. This study uses Time series analysis and predictions, a statistical methods to analyze and forecast temperatures, by using the average max, min and mean temperature for each month of different regions in the United Kingdom measured by the Met Office. The increase in concerns about the effects of rising or decreasing temperature on humans, animals, the climate, oceans, and seasonal patterns provokes the need for accurate models for forecasting the temperatures of the different regions across the globe." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://muizzkolapo.github.io/blog/docs/weather_analysis/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2023-03-04T09:13:17+00:00" />
+<meta property="article:modified_time" content="2023-03-04T09:13:17+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="UK Weather Time series analysis"/>
+<meta name="twitter:description" content="Abstract Forecasting temperature by the use of advance statistical tools is very important in understanding and dealing with the effects of rising or decreasing temperatures. This study uses Time series analysis and predictions, a statistical methods to analyze and forecast temperatures, by using the average max, min and mean temperature for each month of different regions in the United Kingdom measured by the Met Office. The increase in concerns about the effects of rising or decreasing temperature on humans, animals, the climate, oceans, and seasonal patterns provokes the need for accurate models for forecasting the temperatures of the different regions across the globe."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Docs",
+      "item": "https://muizzkolapo.github.io/blog/docs/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "UK Weather Time series analysis",
+      "item": "https://muizzkolapo.github.io/blog/docs/weather_analysis/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "UK Weather Time series analysis",
+  "name": "UK Weather Time series analysis",
+  "description": "Abstract Forecasting temperature by the use of advance statistical tools is very important in understanding and dealing with the effects of rising or decreasing temperatures. This study uses Time series analysis and predictions, a statistical methods to analyze and forecast temperatures, by using the average max, min and mean temperature for each month of different regions in the United Kingdom measured by the Met Office. The increase in concerns about the effects of rising or decreasing temperature on humans, animals, the climate, oceans, and seasonal patterns provokes the need for accurate models for forecasting the temperatures of the different regions across the globe.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Abstract Forecasting temperature by the use of advance statistical tools is very important in understanding and dealing with the effects of rising or decreasing temperatures. This study uses Time series analysis and predictions, a statistical methods to analyze and forecast temperatures, by using the average max, min and mean temperature for each month of different regions in the United Kingdom measured by the Met Office. The increase in concerns about the effects of rising or decreasing temperature on humans, animals, the climate, oceans, and seasonal patterns provokes the need for accurate models for forecasting the temperatures of the different regions across the globe. This report presents the results of forecasting temperatures using trend analysis, seasonality estimation through seasonal averages and seasonal harmonics, the final model were selected using the autoregressive integrated moving average models\nlibrary(magrittr) library(knitr) library(tseries) library(forecast) 1. DATA COLLECTION The data used for this study was gotten from the Met Office website where we sourced for the average max, min and mean temperature for each month for 10 different districts in the UK. This gave us 30 different time series to work with, In order to collect the data from this website without having to download all the individual files or read in the files individually, a function was created, which takes two arguments; the region(district) and the temperature(parameter), For each desired time series data, the function reads in the data, transform it using the time series function and outputs a time series data from 1884 to 2020 at a frequency of 12 observations per year which reperesents each individual monthly average in a year. The time series data was saved in a nested lists for each of the different parameters which made the it easy to work with the massive count of this data.\n#We created a function that takes region and district and imports the data from the Metoffice website. # Create a list of all regions districts \u003c- c(\"Northern_Ireland\", \"Scotland_N\", \"Scotland_E\", \"Scotland_W\", \"England_E_and_NE\", \"England_NW_and_N_Wales\", \"Midlands\", \"East_Anglia\", \"England_SW_and_S_Wales\", \"England_SE_and_Central_S\" ) # create a list of all Parameters features \u003c- c(\"Tmin\", \"Tmean\", \"Tmax\") # indicate template of the url address \u003c-\"https://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/\" # Create a function that reads in files from the website read.ts \u003c- function(district, feature){ c(address, feature, \"/date/\", district, \".txt\") %\u003e% paste(collapse = \"\") %\u003e% read.table(header = TRUE, skip = 5, nrow = 137) %\u003e% subset(select = 2:13) %\u003e% t() %\u003e% as.vector() %\u003e% ts(frequency = 12, end = c(2020, 12)) } # Function to apply the read.ts function to a list feature_select \u003c- function(x) { lapply(districts, read.ts, feature = x) %\u003e% set_names(districts) } # Implement the feature_select function all_data \u003c- lapply(features, feature_select) %\u003e% set_names(features) Tmin \u003c- all_data$Tmin Tmean \u003c- all_data$Tmean Tmax \u003c- all_data$Tmax 2. Minimum and Maximum evaluation Two functions were developed to identify the district and date (year and month) of the highest and the lowest max, min and mean temperature. All our time series data are stored in three groups of temperature parameter, which is a nested list a function was created and we employed the lapply function to apply this function across the respective lists within each group of parameters. The output of the implementation of this function shows that for the average monthly minimum temperature;\nThe region with the highest temperature is England_SE_and_Central_S , and the date is Aug , 1997 The region with the lowest temperature is Scotland_E , and the date is Jan , 1895\" The region with the lowest and highest temperature measurement for the average monthly maximum temperature is;\nThe region with the highest temperature is East_Anglia , and the date is Jul , 2006 The region with the lowest temperature is Midlands , and the date is Feb , 1947 Finally, the region with the lowest and highest temperature measurement for the average monthly mean temperature is;\nThe region with the highest temperature is East_Anglia , and the date is Jul , 2006 The region with the lowest temperature is Scotland_E , and the date is Jan , 1895 # Function to return the maximum value in nested list max_eval \u003c- function(x) { names(x)[which.max(unlist(lapply(x, FUN = max)))] -\u003e region month.abb[(time(x[[region]])[which.max(x[[region]])] %% 1) * 12 + 1] -\u003e month floor(time(x[[region]])[which.max(x[[region]])]) -\u003e year paste( \"The region with the highest temperature for\", deparse(substitute(x)), \"is\", region, \",\", \"and the date is\", month, \",\", year ) } # Function to return the minimum value in nested list min_eval \u003c- function(x) { names(x)[which.min(unlist(lapply(x, FUN = min)))] -\u003e region month.abb[(time(x[[region]])[which.min(x[[region]])] %% 1) * 12 + 1] -\u003e month floor(time(x[[region]])[which.min(x[[region]])]) -\u003e year paste( \"The region with the lowest temperature for\", deparse(substitute(x)), \"is\", region, \",\", \"and the date is\", month, \",\", year ) } # Call min-max evaluating function max_eval(Tmin) min_eval(Tmin) max_eval(Tmax) min_eval(Tmax) max_eval(Tmean) min_eval(Tmean) 3 – Exploratory Data Analysis We performed some exploratory analysis on the time series data and explores some questions about the time series data as seen below.\nWhich district is the coldest/warmest? We will be estimating the coldest and warmest region using the following criteria. We have the time series data for the mean daily maximum air temperature, the mean daily minimum and the mean of air for the regions. We will find the coldest region by finding the region with the highest/lowest temperature across these three groups of time series data measured. We observed that the output using this criteria varies among the three different groups of time seris. This can be seen in the output below.\nThe region with the highest average monthly mean temperature is England_SE_and_Central_S , While the region with the lowest temperature is Scotland_N The region with the highest average monthly minimum temperature is England_SW_and_S_Wales, While the region with the lowest temperature is Scotland_E The region with the highest average monthly maximum temperature is England_SE_and_Central_S, While the region with the lowest temperature is Scotland_N #creating a function to check average values for any time series parameter given avg_temp \u003c- function(x) { lapply(x, mean) -\u003e tmp_val names(tmp_val)[which.max(unlist(lapply(tmp_val, FUN = max)))] -\u003e warmest names(tmp_val)[which.min(unlist(lapply(tmp_val, FUN = min)))] -\u003e coldest result \u003c- paste( \"The region with the highest temperature average for\", deparse(substitute(x)), \"is\", warmest, \", While the region with the lowest temperature is\", coldest ) return(result) } avg_temp(Tmean) avg_temp(Tmin) avg_temp(Tmax) Which district has the widest temperature range? We created a function that takes returns the highest range for a list of time series data. This was applied to three groups of time series data and we observed that for average monthly mean temperature and average monthly minimum temperature East_Anglia and England_SE_and_Central_S had the widest range but for the average monthly maximum temperature we observed that East Anglia had the widest range of temperatures.\nwidest_range \u003c- function(takes_list) { lapply(takes_list, min) %\u003e% as.data.frame() - lapply(takes_list, max) %\u003e% as.data.frame() -\u003e range_diff range_diff[which(range_diff %in% apply(range_diff, 1, min))] -\u003e widest_range return(widest_range) } widest_range(Tmean) widest_range(Tmin) widest_range(Tmax) Are winters/summers getting colder/hotter? We employed data wrangling techniques to group our time series data into two different seasons (winter and summer). We created a function to convert all time series object to data frame of each season(winter and summer). Each row in the dataframe represents a year and the months for a specific season. This function was applied to the average monthly mean temperature, this gives a summary of the occurence for each months in a particular season. A function was then developed to merge all the seasonal dataframe from each region into a single group for a specific season and this was converted to a time series object using the function ts(). The new time series data was then visualized on a time series plot and we observed that the mean temperature for winter months has an upward trend while that of summer months has a downward trend, this means winters are getting hotter while summers are getting colder.\nwinter \u003c- c(\"Dec\", \"Jan\", \"Feb\", \"Year\") summer \u003c- c(\"Jun\", \"Jul\", \"Aug\", \"Year\") get_season \u003c- function(Tparameter, seas_param) { #convert to dataframe dmn \u003c- list(month.abb, unique(floor(time(Tparameter)))) as.data.frame(t(matrix(Tparameter , 12, dimnames = dmn))) -\u003e ts_df #add year to dataframe ts_df$Year \u003c- seq(1884, 2020) #subset data into seasons season \u003c- seas_param #add to new variable ts_df[season] -\u003e season return(season) } lapply(Tmean, get_season,seas_param=summer)-\u003esum_mons lapply(Tmean, get_season,seas_param=winter)-\u003ewin_mons merge_avg_all \u003c- function(season_mons) { my_merge \u003c- function(df1, df2) { merge(df1, df2, by = 'Year') } #merge all dataframe inside Parameter list to one Reduce(my_merge, season_mons) -\u003e regions_tmp_seas #getting yearly average for all regions regions_tmp_seas$testMean \u003c- rowMeans(regions_tmp_seas[, -1]) #selecting year and average of all regions regions_mean \u003c- regions_tmp_seas[c('Year', 'testMean')] #convert back to TS regions_mean %\u003e% subset(select = 2) %\u003e% t() %\u003e% as.vector() %\u003e% ts(frequency = 1, end = c(2020, 1)) -\u003e final_Temp return(final_Temp) } plot(merge_avg_all(win_mons),main=\"Average Winter Temperature Trend\",xlab=\"Year\",ylab=\"Mean Temperature\") plot(merge_avg_all(sum_mons),main=\"Average Summer Temperature Trend\",xlab=\"Year\",ylab=\"Mean Temperature\") 4 – Trend and Seasonality Estimation We created a function to subset the time series data For each district, and considering the 3 time series: max temp, min temp and mean temp, from 1884 until December 2019. This was implemented using the ts() function which takes start of the series, frequency of the series, and end of the series. We created a function that subsets our time series from 1884 - 2019 called “subset_2019” which was then applied to the entire 30 time series data set. The Lapply function is one used to apply a function to every element in a list, since our 3 groups of time series are stored as a nested list the lapply function was used to apply our subset_2019 function on the 3 different groups of our time series data Tmin, Tmax, Tmean to subset the 30 time series data from 1884-2019. We manually created a time vector for our time series “time.all” which will be used extensively in this analysis.\n#function to Subset each of the 30 time series until December 2019 subset_2019 \u003c- function(x) { x %\u003e% head(-12) } #subset all groups of time series data to december 2019 using subset_2019 function lapply(Tmin, subset_2019) -\u003e Tmin_2019 lapply(Tmean, subset_2019) -\u003e Tmean_2019 lapply(Tmax, subset_2019) -\u003e Tmax_2019 # manually create time range time.all \u003c- seq( from = start(Tmax_2019$Northern_Ireland)[1], by = 1 / frequency(Tmax_2019$Northern_Ireland), length.out = length(Tmax_2019$Northern_Ireland) ) Compare your results and use appropriate plots and/or tables to confirm your observations.\n4.1 Estimating trend We estimated the trend of each time series using linear, quadratic and cubic regression. A function was developed to apply the 3 different order of polynomial models(linear, quadratic and cubic). The function “run_model” takes a time series data and its time vector and returns its linear, quadratic and cubic models. A function “plot_model” was created which returns a plot of the time series data, linear, quadratic and cubic models all together on a single plot. Finally, We created a function “model_design” which returns the Akaike criterion (AIC) for each model that was passed into its arguments.We are working with data nested into a list and as such we will create a function that can apply the model_design function to a list of time series, this new function was called “apply_model_design”. This function “apply_model_design” will return a list of AIC values for the linear, quadratic and cubic models. We then used the apply_model_design on the three groups of time series data we have. The application of this function gives us the AIC value of each region for the different parameters(TMIN,TMEAN and TMAX).\n#Function to return models run_model \u003c- function(data, time) { l_model \u003c- lm(data ~ poly(time, degree = 1, raw = TRUE)) q_model \u003c- lm(data ~ poly(time, degree = 2, raw = TRUE)) c_model \u003c- lm(data ~ poly(time, degree = 3, raw = TRUE)) return(list( l_model = l_model, q_model = q_model, c_model = c_model )) } #Function to return a plot plot_model \u003c- function(data, time,main) { l_var_name \u003c- lm(data ~ poly(time, degree = 1, raw = TRUE)) q_var_name \u003c- lm(data ~ poly(time, degree = 2, raw = TRUE)) c_var_name \u003c- lm(data ~ poly(time, degree = 3, raw = TRUE)) xlab \u003c- \"Year\" ylab \u003c- \"Temperature\" plot( data, main = main, ylab = ylab, xlab = xlab, xlim = c(1880, 2025), lwd = 1, type = \"l\" ) lines( time, fitted(l_var_name), lwd = 5, col = 'red', lty = \"dotdash\" ) lines( time, fitted(q_var_name), lwd = 5, col = 'green', lty = \"dotdash\" ) lines( time, fitted(c_var_name), lwd = 5, col = 'yellow', lty = \"dotdash\" ) } #Function to return a list of AIC of different models used for each group of time series model_design \u003c- function(data, time, var_name, poly_degree) { var_name \u003c- lm(data ~ poly(time, degree = poly_degree, raw = TRUE)) Var_AIC \u003c- AIC(var_name) main \u003c- \"Average Temperature from 1879\" xlab \u003c- \"Year\" ylab \u003c- \"Temp\" return(list(Var_AIC = Var_AIC)) } #Function that applies the model_design function to a list and returns list of list apply_model_design \u003c- function(my_list) { lapply( my_list, model_design, var_name = 'linear', poly_degree = 1, time = time.all ) -\u003e linear.models lapply( my_list, model_design, var_name = 'quadratic', poly_degree = 2, time = time.all ) -\u003e quadratic.models lapply( my_list, model_design, var_name = 'cubic', poly_degree = 3, time = time.all ) -\u003e cubic.models all_list \u003c- list( linear.models = linear.models, quadratic.models = quadratic.models, cubic.models = cubic.models ) return(all_list) } #apply the apply_model_design function on different groups of Time series apply_model_design(Tmin_2019)-\u003e Tmin_models apply_model_design(Tmax_2019)-\u003e Tmax_models apply_model_design(Tmean_2019)-\u003e Tmean_models Select a trend model for each time series using an appropriate criteria. Are the models selected all the same? If not is there a pattern depending on the region and/or the group (max, min and mean)?\n4.2 Trend Selection We created a function “which_model” which helps select the best model for a time series, we have the linear, quadratic and cubic AIC values for each region, we will use this function to find the model with the least Akaike criterion(AIC) values which signifies the best model for the time series data. The which_model() function when applied to a list of different time series data returns a dataframe which has a column “Best.Model” which shows the row-wise minimum for each region since each row represents a region and its linear, quadratic and cubic models for a specific parameter. It was observed that all the regions had their best model as the linear model except for two regions(England_E_and_NE and East_Anglia) in the average monthly maximum temperature (Tmax) parameter. The table for best models for each region for a specific parameter can be found below.\n# Function to return the best model which_model \u003c- function(Model_parameter) { Model_parameter$linear.models %\u003e% as.data.frame() -\u003e l names(l) \u003c- c(names(Model_parameter$linear.models)) Model_parameter$quadratic.models %\u003e% as.data.frame() -\u003e q names(q) \u003c- c(names(Model_parameter$quadratic.models)) Model_parameter$cubic.models %\u003e% as.data.frame() -\u003e c names(c) \u003c- c(names(Model_parameter$cubic.models)) ModelAIC \u003c- c(\"Linear\", \"Quadratic\", \"Cubic\") cbind(ModelAIC, rbind(l, q, c)) -\u003e tminbind tminbind %\u003e% as.vector() %\u003e% t() %\u003e% as.data.frame() -\u003e new names(new) \u003c- as.matrix(new[1,]) new \u003c- new[-1,] new[] \u003c- lapply(new, function(x) type.convert(as.character(x))) new$Best.Model \u003c- colnames(new)[apply(new, 1, FUN = which.min)] return(new) } Best Model by region for Average monthly minimum temperature which_model(Tmin_models) Best Model by region for Average monthly mean temperature which_model(Tmean_models) Best Model by region for Average monthly maximum temperature which_model(Tmax_models) As stated above we observed that all our model choice for all regions are uniform except England_E_and_NE and East_Anglia for the Tmax parameter, it would be interesting to see a plot of the linear model vs plot of the cubic model. We used the function “plot_model” created above to implement these plots and we observe that there is a difference in the plots for the different regions, while Northern Ireland has a more stable trend, we can see that England_E_and_NE and East_Anglia do have some cubic trend.\nplot_model(Tmax_2019$England_E_and_NE,time.all,\"Trend of Average monthly maximum temperature England_E_and_NE\") plot_model(Tmax_2019$East_Anglia,time.all,\"Trend of Average monthly maximum temperature East_Anglia\") plot_model(Tmax_2019$Northern_Ireland,time.all,\"Trend of Average monthly maximum temperature Northern_Ireland\") 4.3 Estimating seasonality using seasonal means and harmonic models 4.3.1 removing Trend using averaging We will create a function that removes the trend component and returns its monthly average. The function takes two arguments which are the time series data and the polynomial model that bests fit it according to the Akaike Criterion. All models except England_E_and_NE and East_Anglia for the Tmax parameter have a linear model as their best model. We will split the Tmax time series data into two groups the linear and the cubic groups, this would make it easier to apply functions which are specific to the best model for each region. We will then use the return_month_avg to return the seasonal means of each of the different regions based on their best trend model.\nreturn_month_avg \u003c- function(takes_data, model_type) { run_model(takes_data, time.all) -\u003e model.result data.notrend \u003c- takes_data - fitted(model.result[[model_type]]) tapply(data.notrend, cycle(takes_data), mean) %\u003e% as.data.frame() -\u003e fin_month_avg colnames(fin_month_avg) \u003c- c('Season_Mean') mymonths \u003c- c(\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\") #add abbreviated month name fin_month_avg$Month \u003c- mymonths return(fin_month_avg) } # Subsetting cubic and linear model for TMAX Tmax_2019[-c(5,8)] -\u003e Tmax_2019_ln Tmax_2019[c(5,8)]-\u003e Tmax_2019_cubic #----Estimate seasonal average for All linear model lapply(Tmin_2019, return_month_avg, model_type = \"l_model\") %\u003e% set_names(names(Tmin_2019)) -\u003e Tmin_monthly_avg lapply(Tmean_2019, return_month_avg, model_type = \"l_model\") %\u003e% set_names(names(Tmin_2019)) -\u003e Tmean_monthly_avg lapply(Tmax_2019_ln, return_month_avg, model_type = \"l_model\") %\u003e% set_names(names(Tmax_2019_ln)) -\u003e Tmax_monthly_avg_ln #----Estimate seasonal average for All cubic model lapply(Tmax_2019_cubic, return_month_avg, model_type = \"c_model\") %\u003e% set_names(names(Tmax_2019_cubic)) -\u003e Tmean_monthly_avg_cubic Sample monthly average for Northern Ireland Tmin_monthly_avg$Northern_Ireland 4.3.2 Estimate seasonality with seasonal average The seasonality was estimated using the seasonal means method. We created a function return_seas_avg which takes the time series data and model type. The function models the inputs and returns the seasonal means for each of the time series provided to it. We used lapply to apply the return_seas_avg to the list of time series for the different parameters Tmin, Tmax, Tmean.\nreturn_seas_avg \u003c- function(data, model_type) { #one region since all months are the same months \u003c- as.factor(cycle(Tmin_2019$Northern_Ireland)) # Apply the run_model function to the data to get the specified model run_model(data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- data - fitted(model.result[[model_type]]) seas.means \u003c- lm(data.notrend ~ months - 1) return(seas.means) } lapply(Tmin_2019, return_seas_avg, model_type = \"l_model\") %\u003e% set_names(names(Tmin_2019)) -\u003e Tmin_seas_est lapply(Tmean_2019, return_seas_avg, model_type = \"l_model\") %\u003e% set_names(names(Tmin_2019)) -\u003e Tmean_seas_est lapply(Tmax_2019_ln, return_seas_avg, model_type = \"l_model\") %\u003e% set_names(names(Tmax_2019_ln)) -\u003e Tmax_seas_est_ln #All cubic model lapply(Tmax_2019_cubic, return_seas_avg, model_type = \"c_model\") %\u003e% set_names(names(Tmax_2019_cubic)) -\u003e Tmax_seas_est_cubic #joined max do.call(c, list(Tmax_seas_est_ln, Tmax_seas_est_cubic)) -\u003e Tmax_ln_nd_cub_seas # seasonal means validation check length(names(Tmin_seas_est)) length(names(Tmean_seas_est)) length(names(Tmax_ln_nd_cub_seas)) 4.3.2 Estimating seasonality using harmonic mean We created a function to give the harmonic mean of a time series data. We performed a trend check on the time series and remove the specified trend type(l_model,c_model and q_model). The residuals were derived by subtracting the data from the fitted data. In our dataset since all our best models are linear except for England_E_and_NE and East_Anglia for the average monthly maximum temperature, this means all our models will be linear except these two which will be cubic. In this step we applied the return_harmonic function to all our time series data, a check will be done for models that are significant at a p-value of 0.05.\n# Function to return the harmonic mean of a time series data return_harmonic \u003c- function(takes_data, trend_type) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result[[trend_type]]) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } # Function to return harmonic of specified order seasonal.har \u003c- function(order) { assign(paste(c(\"seasonal.har\", order), collapse = \"\"), lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:order], COS = COS[, 1:order]))) return(get(paste(c( \"seasonal.har\", order ), collapse = \"\"))) } # order 1 seas.har1 \u003c- seasonal.har(1) # order 2 seas.har2 \u003c- seasonal.har(2) # order 3 seas.har3 \u003c- seasonal.har(3) # SIN.3 not significant # order 4 seas.har4 \u003c- seasonal.har(4) # SIN.3 COS.4 not significant # order 5 seas.har5 \u003c- seasonal.har(5) # SIN.3 SIN5 COS.4 COS.5 not significant # order 6 seas.har6 \u003c- seasonal.har(6) # SIN.3 SIN5 SIN.6 COS.4 COS.5 COS.6 not significant return( list( seas.har1 = seas.har1, seas.har2 = seas.har2, seas.har3 = seas.har3, seas.har4 = seas.har4, seas.har5 = seas.har5, seas.har6 = seas.har6 ) ) } # Apply the return_harmonic function to all time series lapply(Tmin_2019, return_harmonic, trend_type = \"l_model\") %\u003e% set_names(names(Tmin_2019)) -\u003e Tmin_harmonic lapply(Tmean_2019, return_harmonic, trend_type = \"l_model\") %\u003e% set_names(names(Tmean_2019)) -\u003e Tmean_harmonic lapply(Tmax_2019_ln, return_harmonic, trend_type = \"l_model\") %\u003e% set_names(names(Tmax_2019_ln)) -\u003e Tmax_harmonic_ln #remove the cubic trend from England_E_and_NE and East_Anglia for the Tmax parameter lapply(Tmax_2019_cubic, return_harmonic, trend_type = \"c_model\") %\u003e% set_names(names(Tmax_2019_cubic)) -\u003e Tmax_harmonic_cubic significant models We created a function to return the significant models for a specific region and harmonic. We need models with a p-value lower than that of the null hypothesis. We create region_harmonics() function to take a list and apply all the function singular_harmonic using lapply() to all the elements in the list provided in the argument. We developed a function grouped_harmonica() that applies the region_harmonics function to a nested list. This would return only the models that has passed the null hypothesis test, hence containing only significant models.\nThe Null hypothesis and alternative hypothesis are as follows:\nNull hypothesis: The model is not significant Alternative hypothesis: The model is significant # p-value lesser than 0.05 shows significant that null is false singular_harmonic \u003c- function(x) { summary(x) -\u003e temp temp$coefficients %\u003e% as.data.frame() -\u003e temp2 temp2 \u003c- temp2[temp2$`Pr(\u003e|t|)` \u003c 0.05,] temp2$Harmonic.Model \u003c- row.names(temp2) #return(temp2) } region_harmonics \u003c- function(takes_list) { lapply(takes_list, singular_harmonic) %\u003e% set_names(names(takes_list)) -\u003e significant_mods return(significant_mods) } grouped_harmonica \u003c- function(x) { lapply(x, region_harmonics) %\u003e% set_names(names(x)) -\u003e Tmin_best_harmonics return(Tmin_best_harmonics) } grouped_harmonica(Tmin_harmonic) -\u003e Tmin_indexed_harmonics grouped_harmonica(Tmean_harmonic) -\u003e Tmean_indexed_harmonics grouped_harmonica(Tmax_harmonic_ln) -\u003e Tmax.ln_indexed_harmonics grouped_harmonica(Tmax_harmonic_cubic) -\u003e Tmax.cub_indexed_harmonics Unique models across all time series We created a function that checks the unique models for each element in a list. This unique model would be used to then recreate the harmonic models. We retrieved the best harmonic for each region i.e all harmonics with P-value lesser than the null hypothesis p-value of 0.05. We applied the unique function to all our best model to retrieve only unique models. We observed 5 different unique configurations for our models, this would be used to create 5 different functions, each function will be specific to the unique model configurations found in the implementation below.\nbest_harm \u003c- function(takes_list) { lapply(takes_list, unique) %\u003e% set_names(names(takes_list)) -\u003e significant_harmonics return(significant_harmonics) } Tmin_best_harmonics \u003c- best_harm(Tmin_indexed_harmonics) Tmean_best_harmonics \u003c- best_harm(Tmean_indexed_harmonics) Tmax.ln_best_harmonics \u003c- best_harm(Tmax.ln_indexed_harmonics) Tmax.cub_best_harmonics \u003c- best_harm(Tmax.cub_indexed_harmonics) #unique(Tmin_best_harmonics) best_model_list \u003c- c( Tmin_best_harmonics, Tmean_best_harmonics, Tmax.ln_best_harmonics, Tmax.cub_best_harmonics ) lapply(best_model_list, unique) %\u003e% set_names(names(best_model_list)) -\u003e all_unique_best length(unique(all_unique_best) ) # View unique model config unique(all_unique_best) create functions to map models Five different functions were developed inline with the 5 different significant harmonic models we had during the null hypothesis test. The functions are:\nrerun_harmonic1 - [“SIN” “COS” ] and [“SIN.1” “SIN.2” “COS.1” “COS.2”] rerun_harmonic2 - [“SIN” “COS”], [“SIN.1” “SIN.2” “COS.1” “COS.2”] and [“SIN.1” “SIN.2” “COS.1” “COS.2” “COS.4”] rerun_harmonic3 - [“SIN” “COS”], [“SIN.1” “SIN.2” “COS.1” “COS.2”] and [“SIN.1” “SIN.2” “SIN.5” “COS.1” “COS.2”] rerun_harmonic4 - [“SIN” “COS”], [“SIN.1” “SIN.2” “COS.1” “COS.2”] and [“SIN.1” “SIN.2” “COS.1” “COS.2” “COS.3”] rerun_harmonic5 - [“SIN” “COS”], [“SIN.1” “SIN.2” “COS.1” “COS.2”], [“SIN.1” “SIN.2” “COS.1” “COS.2” “COS.3”] and [“SIN.1” “SIN.2” “SIN.4” “COS.1” “COS.2” “COS.3”] We observe that all significant models include the first and second harmonics with little variations among the other models. The functions takes the time series data and the best trend model for it l_model, q_model or c_model and returns the harmonic with the lowest Akaike criterion among all the harmonic models implemented within the specific function. Implementing this function gives us the best harmonic model for each of the 30 time series data we are working with.\n# Function \"SIN.1\" \"SIN.2\" \"COS.1\" \"COS.2\" and \"SIN\" \"COS\" rerun_harmonic1 \u003c- function(takes_data, trend_type) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result[[trend_type]]) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har1 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1])) seas.har2 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)])) list(seas.har1 = seas.har1, seas.har2 = seas.har2) -\u003e myl lapply(myl, AIC) -\u003e mlk names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -\u003e res return(mlk) } rerun_harmonic2 \u003c- function(takes_data, trend_type) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result[[trend_type]]) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har1 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1])) seas.har2 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)])) seas.har3_B \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 4)])) list(seas.har1 = seas.har1, seas.har2 = seas.har2, seas.har3_B = seas.har3_B) -\u003e myl lapply(myl, AIC) -\u003e mlk names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -\u003e res return(mlk) } rerun_harmonic3 \u003c- function(takes_data, trend_type) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result[[trend_type]]) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har1 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1])) seas.har2 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)])) seas.har3_C \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2, 5)], COS = COS[, c(1, 2)])) list(seas.har1 = seas.har1, seas.har2 = seas.har2, seas.har3_C = seas.har3_C) -\u003e myl lapply(myl, AIC) -\u003e mlk names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -\u003e res return(mlk) } rerun_harmonic4 \u003c- function(takes_data, trend_type) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result[[trend_type]]) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har1 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1])) seas.har2 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)])) seas.har3_A \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 3)])) list(seas.har1 = seas.har1, seas.har2 = seas.har2, seas.har3_A = seas.har3_A) -\u003e myl lapply(myl, AIC) -\u003e mlk names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -\u003e res return(mlk) } rerun_harmonic5 \u003c- function(takes_data, trend_type) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result[[trend_type]]) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har1 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1])) seas.har2 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)])) seas.har3 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 3)])) seas.har4 \u003c- lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, c(1, 2, 4)], COS = COS[, c(1, 2, 3)])) list( seas.har1 = seas.har1, seas.har2 = seas.har2, seas.har3 = seas.har3, seas.har4 = seas.har4 ) -\u003e myl lapply(myl, AIC) -\u003e mlk which.min(unlist(lapply(mlk, FUN = min))) -\u003e res return(mlk) } Subset all the time series into groups of significant harmonic model We have 5 different configurations of significant harmonnic models, we will group each of our time series parameter (Tmin,Tmean and Tmax) to the significant harmonic model group they belong to among these 5 configurations after which their respective function is then applied on each subset. Based on initial analysis we observed that for our average monthly maximum temperature we have two regions with a cubic trend model as their best trend model, we will create a different subset for this group to make the implementation of these functions on the time series data seamless.\n#Subset Tmin_best_harmonics into significant harmonic groups Tmin_best_dual \u003c- Tmin_2019[-c(3, 9)] #function rerun_harmonic1 would work for this lapply(Tmin_best_dual, rerun_harmonic1, trend_type = \"l_model\") %\u003e% set_names(names(Tmin_best_dual)) -\u003e significant_Tmin_dual ############################################################################################ Tmin_best_trio1 \u003c- Tmin_2019[c(3)] # function rerun_harmonic2 would work for this lapply(Tmin_best_trio1, rerun_harmonic2, trend_type = \"l_model\") %\u003e% set_names(names(Tmin_best_trio1)) -\u003e significant_Tmin_trio1 ############################################################################################ Tmin_best_trio2 \u003c- Tmin_2019[c(9)] # rerun_harmonic3 would work on this lapply(Tmin_best_trio2, rerun_harmonic3, trend_type = \"l_model\") %\u003e% set_names(names(Tmin_best_trio2)) -\u003e significant_Tmin_trio2 ############################################################################################ # Subset Tmean_best_harmonics into significant harmonic groups Tmean_best_dual \u003c- Tmean_2019[-c(4, 10)] #rerun_harmonic1 will work for this lapply(Tmean_best_dual, rerun_harmonic1, trend_type = \"l_model\") %\u003e% set_names(names(Tmean_best_dual)) -\u003e significant_Tmean_dual ############################################################################################ Tmean_best_trio1 \u003c- Tmean_2019[c(4)] # rerun_harmonic4 will work for this lapply(Tmean_best_trio1, rerun_harmonic4, trend_type = \"l_model\") %\u003e% set_names(names(Tmean_best_trio1)) -\u003e significant_Tmean_trio1 ############################################################################################ Tmean_best_trio2 \u003c- Tmean_2019[c(10)] #rerun_harmonic3 this function works for this lapply(Tmean_best_trio2, rerun_harmonic1, trend_type = \"l_model\") %\u003e% set_names(names(Tmean_best_trio2)) -\u003e significant_Tmean_trio2 ############################################################################################ #Subset Tmax.ln_best_harmonics into significant harmonic groups Tmax.ln_best_dual \u003c- Tmax_2019_ln[c(6, 8)] #rerun_harmonic1 will work for this lapply(Tmax.ln_best_dual, rerun_harmonic1, trend_type = \"l_model\") %\u003e% set_names(names(Tmax.ln_best_dual)) -\u003e significant_Tmax.ln_dual ############################################################################################ Tmax.ln_best_trio1 \u003c- Tmax_2019_ln[-c(6, 7, 8)] # rerun_harmonic4 this will work for this lapply(Tmax.ln_best_trio1, rerun_harmonic4, trend_type = \"l_model\") %\u003e% set_names(names(Tmax.ln_best_trio1)) -\u003e significant_Tmax.ln_trio1 ############################################################################################ Tmax.ln_best_trio2 \u003c- Tmax_2019_ln[c(7)] # rerun_harmonic5 should work for this lapply(Tmax.ln_best_trio2, rerun_harmonic5, trend_type = \"l_model\") %\u003e% set_names(names(Tmax.ln_best_trio2)) -\u003e significant_Tmax.ln_trio2 ############################################################################################ #Subset Tmax.cub_best_harmonics harmonic into significant harmonic groups #Tmax.cub_best_harmonics[c(1,2)] Tmax.cubic_best_dual \u003c- Tmax_2019_cubic[c(1, 2)] #rerun_harmonic1 this functipn will work for this lapply(Tmax.cubic_best_dual, rerun_harmonic1, trend_type = \"c_model\") %\u003e% set_names(names(Tmax.cubic_best_dual)) -\u003e significant_Tmax.cub_trio2 ############################################################################################ 4.4 Seasonal model selection Seasonal average or harmonic models? • Select a seasonal model for each time series using an appropriate criteria. Are the models selected all the same? If not is there a pattern depending on the region and/or the group (max, min and mean)? We now have the different significant harmonic models and the seasonal means of all our time series, we will use the Akaike Criterion to determine the best model for each time series data, as stated above the model with the least AIC will be the best model for the specific time series data.\ncreate a function that selects best model for all different parameters We created a function get_min_AIC that takes 3 arguments the district/region, the best harmonic model, and the seasonal average and returns the model with the lowest Akaike criterion. In this function we combine the AIC of the seasonal average model of the time series and the AIC of the harmonic model and then return the model with the lowest AIC.\nget_min_AIC \u003c- function(x, y, z) { AIC(z[[x]]) -\u003e seas.avg y [[x]] -\u003e temp1 temp1 \u003c- c(temp1, seas.avg = seas.avg) names(temp1)[which.min(unlist(lapply(temp1, FUN = min)))] -\u003e res return(res) } All TMIN We used the do.call function to re-combine our different configurations for TMIN parameter into one list for each parameter. The get_min_AIC method was then applied on each time series to return the model with the lowest AIC and we observe that seasonal average was not the best for any of the time series in this group.\ndo.call(c, list( significant_Tmin_dual, significant_Tmin_trio1, significant_Tmin_trio2 )) -\u003e Tmin_harm_final lapply(districts, get_min_AIC, y = Tmin_harm_final, z = Tmin_seas_est) %\u003e% set_names(districts) -\u003e best_model_TMIN best_model_TMIN %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() -\u003eTmin.best names(Tmin.best)[1] \u003c- \"Best Model Tmin\" Tmin.best ALl TMEAN We used the do.call function to re-combine our different configurations for TMEAN parameter into one list for each parameter. The get_min_AIC method was then applied on each time series to return the model with the lowest AIC and we observe that seasonal average was not the best for any of the time series in this group.\ndo.call(c, list( significant_Tmean_dual, significant_Tmean_trio1, significant_Tmean_trio2 )) -\u003e Tmean_harm_final lapply(districts, get_min_AIC, y = Tmean_harm_final, z = Tmean_seas_est) %\u003e% set_names(districts) -\u003e best_model_TMean best_model_TMean %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() -\u003e Tmean.best names(Tmean.best)[1] \u003c- \"Best Models Tmean\" Tmean.best ALL Tmax We combined the time series with a linear trend into a single list and applied the get_min_AIC and the same was done for time series with a cubic trend.\ndo.call( c, list( significant_Tmax.ln_dual, significant_Tmax.ln_trio1, significant_Tmax.ln_trio2 ) ) -\u003e Tmax_harm_final_ln significant_Tmax.cub_trio2 -\u003e Tmax_harm_final_cubic linear_districts \u003c- names(Tmax_2019)[-c(5, 8)] lapply(linear_districts, get_min_AIC, y = Tmax_harm_final_ln, z = Tmax_seas_est_ln) %\u003e% set_names(linear_districts) -\u003e best_model_TMax_ln best_model_TMax_ln %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() -\u003e Tmax.ln.best names(Tmax.ln.best)[1] \u003c- \"Best Models Tmax\" cubic_district \u003c- names(Tmax_2019)[c(5, 8)] lapply(cubic_district, get_min_AIC, y = Tmax_harm_final_cubic, z = Tmax_seas_est_cubic) %\u003e% set_names(cubic_district) -\u003e best_model_TMax_cubic best_model_TMax_cubic %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() -\u003e Tmax.cb.best names(Tmax.cb.best)[1] \u003c- \"Best Models Tmax\" rbind.data.frame(Tmax.ln.best,Tmax.cb.best) We used the unique function to check the unique best models for each group of our time series and we can see we have 5 different best models distributed among the different time series data. Similar to the approach used above, we will create 5 functions that models our combined trend model and seasonal models for each time series data. Unique Models\nlist( unique(best_model_TMIN), unique(best_model_TMean), unique(best_model_TMax_ln), unique(best_model_TMax_cubic) ) %\u003e% unlist() %\u003e% unique() list( unique(best_model_TMIN), unique(best_model_TMean), unique(best_model_TMax_ln), unique(best_model_TMax_cubic) ) %\u003e% unlist() %\u003e% unique() %\u003e% length() 4.5 Building combined model for trend and seasonality We have 5 different best model distributed among the different groups of time series, we will create 5 functions to implement the combine models based on the groups each time series data belongs to, we will subset the time series into their respective groups and apply these functions across the respective groups. Finally, We combined all the different models for the time series into a variable called “final”.\n# function for model with Seasonal harmonic 2 as the best model combined_mod_har2 \u003c- function(data, poly_order) { SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har2 \u003c- lm(data ~ ., data = data.frame( TIME = poly(time.all, poly_order, raw = TRUE), SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)] )) #print(summary(get(paste(c(\"seasonal.har\",order), collapse = \"\")))) return(seas.har2) } # function for model with Seasonal harmonic 3 A as the best model combined_mod_har3_A \u003c- function(data, poly_order) { SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har3_A \u003c- lm(data ~ ., data = data.frame( TIME = poly(time.all, poly_order, raw = TRUE), SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 3)] )) #print(summary(get(paste(c(\"seasonal.har\",order), collapse = \"\")))) return(seas.har3_A) } # function for model with Seasonal harmonic 3 B as the best model combined_mod_har3_B \u003c- function(data, poly_order) { SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har3_B \u003c- lm(data ~ ., data = data.frame( TIME = poly(time.all, poly_order, raw = TRUE), SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 4)] )) #print(summary(get(paste(c(\"seasonal.har\",order), collapse = \"\")))) return(seas.har3_B) } # function for model with Seasonal harmonic 3 C as the best model combined_mod_har3_C \u003c- function(data, poly_order) { SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har3_C \u003c- lm(data ~ ., data = data.frame( TIME = poly(time.all, poly_order, raw = TRUE), SIN = SIN[, c(1, 2, 5)], COS = COS[, c(1, 2)] )) #print(summary(get(paste(c(\"seasonal.har\",order), collapse = \"\")))) return(seas.har3_C) } # function for model with Seasonal harmonic 4 as the best model combined_mod_har4 \u003c- function(data, poly_order) { SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } seas.har4 \u003c- lm(data ~ ., data = data.frame( TIME = poly(time.all, poly_order, raw = TRUE), SIN = SIN[, c(1, 2, 4)], COS = COS[, c(1, 2, 3)] )) #print(summary(get(paste(c(\"seasonal.har\",order), collapse = \"\")))) return(seas.har4) } #subset for each model that belog to specific hars Tmin_har2_district \u003c- Tmin_2019[names(best_model_TMIN[-c(3, 9)])] lapply(Tmin_har2_district, combined_mod_har2, poly_order = 1) -\u003e final_model_Tmin_har2 ##################################################################### Tmin_har3_B_district \u003c- Tmin_2019[names(best_model_TMIN[c(3)])] lapply(Tmin_har3_B_district, combined_mod_har3_B, poly_order = 1) -\u003e final_model_Tmin_har3_B ##################################################################### Tmin_har3_C_district \u003c- Tmin_2019[names(best_model_TMIN[c(9)])] lapply(Tmin_har3_C_district, combined_mod_har3_C, poly_order = 1) -\u003e final_model_Tmin_har3_C ##################################################################### #######################COMBINE ALL TMIN############################################## do.call(c, list( final_model_Tmin_har2, final_model_Tmin_har3_B, final_model_Tmin_har3_C )) -\u003e Tmin_final_model # time series count validation check length(names(Tmin_final_model)) Tmean_har2_district \u003c- Tmean_2019[names(best_model_TMean[-c(4)])] lapply(Tmean_har2_district, combined_mod_har2, poly_order = 1) -\u003e final_model_Tmean_har2 ##################################################################### Tmean_har3_A_district \u003c- Tmean_2019[names(best_model_TMean[c(4)])] lapply(Tmean_har3_A_district, combined_mod_har3_A, poly_order = 1) -\u003e final_model_Tmean_har3_A ##################################################################### #######################COMBINE ALL TMEAN############################################## do.call(c, list(final_model_Tmean_har2, final_model_Tmean_har3_A)) -\u003e Tmean_final_model # time series count validation check length(names(Tmean_final_model)) Tmax_har3_A_district_ln \u003c- Tmax_2019[names(best_model_TMax_ln[1:5])] lapply(Tmax_har3_A_district_ln, combined_mod_har3_A, poly_order = 1) %\u003e% set_names(names(Tmax_har3_A_district_ln)) -\u003e final_model_Tmax_har3_A ##################################################################### Tmax_har2_district_ln \u003c- Tmax_2019[names(best_model_TMax_ln[c(6, 8)])] lapply(Tmax_har2_district_ln, combined_mod_har2, poly_order = 1) %\u003e% set_names(names(Tmax_har2_district_ln)) -\u003e final_model_Tmax_ln_har2 ##################################################################### Tmax_har4_district_ln \u003c- Tmax_2019[names(best_model_TMax_ln[c(7)])] lapply(Tmax_har4_district_ln, combined_mod_har4, poly_order = 1) %\u003e% set_names(names(Tmax_har4_district_ln)) -\u003e final_model_Tmax_ln_har4 ##################################################################### Tmax_har2_district_cb \u003c- Tmax_2019[names(best_model_TMax_cubic)] lapply(Tmax_har2_district_cb, combined_mod_har2, poly_order = 3) %\u003e% set_names(names(Tmax_har2_district_cb)) -\u003e final_model_Tmax_cb_har2 ##################################################################### #######################COMBINE ALL TMAX############################################## do.call( c, list( final_model_Tmax_har3_A, final_model_Tmax_ln_har2, final_model_Tmax_ln_har4, final_model_Tmax_cb_har2 ) ) -\u003e Tmax_final_model # time series count validation check length(names(Tmax_final_model)) #---FINAL MODEL list(Tmin_final_model=Tmin_final_model, Tmean_final_model=Tmean_final_model,Tmax_final_model=Tmax_final_model) -\u003e final 4.6 Creating test set using a combined quadratic and sin-cosine (of order 2) models. A function return_quad_sin_cos was created to Estimate trend and seasonality using a combined quadratic and sin-cosine (of order 2) models. We created a function to apply the return_quad_sin_cos on a nested list called def_temp. The final outputs were joined into a list and called test.\n# Function to return the harmonic mean of a time series data return_quad_sin_cos \u003c- function(takes_data) { # Apply the run_model function to the data to get the specified model run_model(takes_data, time.all) -\u003e model.result # Get the residuals from the data which does not have the trend data.notrend \u003c- takes_data - fitted(model.result$q_model) # Create a matrix of SINE and COSINE values SIN \u003c- COS \u003c- matrix(nrow = length(time.all), ncol = 6) for (i in 1:6) { SIN[, i] \u003c- sin(2 * pi * i * time.all) COS[, i] \u003c- cos(2 * pi * i * time.all) } # Function to return harmonic of specified order seasonal.har \u003c- function(order) { assign(paste(c(\"seasonal.har\", order), collapse = \"\"), lm(data.notrend ~ . - 1, data.frame(SIN = SIN[, 1:order], COS = COS[, 1:order]))) return(get(paste(c( \"seasonal.har\", order ), collapse = \"\"))) } # order 2 seas.har2 \u003c- seasonal.har(2) return(seas.har2) } #function that applies lapply def_temp \u003c- function(takes_list) { lapply(takes_list, return_quad_sin_cos) %\u003e% set_names(names(takes_list)) -\u003e res return(res) } list_param \u003c- list( \"Tmin_2019\" = Tmin_2019, \"Tmean_2019\" = Tmean_2019, \"Tmax_2019\" = Tmax_2019 ) lapply(list_param, def_temp) -\u003e test 5 ARMA and Forecasting 5.1 Retrieving the residuals for test and final models We subsetted the final and test model into subsets of the component parameters (Tmax,Tmean and Tmin), a function was created to derive the residuals for both final and test models. The mapply function was used to dervive the residuals by subtracting the combined model(final and test) from the original time series data. We removed trend and seasonality from each of the 30 time series for both the final and test model and hence we now have 60 residuals time series.\nfinal$Tmin_final_model -\u003e Tmin_final_model final$Tmean_final_model -\u003e Tmean_final_model final$Tmax_final_model -\u003e Tmax_final_model test$Tmin_2019 -\u003e Tmin_test_model test$Tmean_2019 -\u003e Tmean_test_model test$Tmax_2019 -\u003e Tmax_test_model residuals_func \u003c- function(ts_data,final_model){ residuals \u003c- ts_data - final_model %\u003e% fitted() return(residuals) } #to apply mapply create a variable sorted names sorted_district \u003c- sort(names(Tmin_2019)) #we had to sort cause mapply works only on sorted mapply(residuals_func, Tmin_2019[sorted_district], Tmin_final_model[sorted_district], SIMPLIFY = FALSE) -\u003e residual_tmin mapply(residuals_func, Tmean_2019[sorted_district], Tmean_final_model[sorted_district], SIMPLIFY = FALSE) -\u003e residual_tmean mapply(residuals_func, Tmax_2019[sorted_district], Tmax_final_model[sorted_district], SIMPLIFY = FALSE) -\u003e residual_tmax #we had to sort cause mapply works only on sorted mapply(residuals_func, Tmin_2019[sorted_district], Tmin_test_model[sorted_district], SIMPLIFY = FALSE) -\u003e test_residual_tmin mapply(residuals_func, Tmean_2019[sorted_district], Tmean_test_model[sorted_district], SIMPLIFY = FALSE) -\u003e test_residual_tmean mapply(residuals_func, Tmax_2019[sorted_district], Tmax_test_model[sorted_district], SIMPLIFY = FALSE) -\u003e test_residual_tmax 5.2 Fit the residuals with an appropriate ARMA model. To fit a arma model to all our time series we created a function “fit_fun” which takes a residual as an argument and returns a model for our residuals. This was used to create forecasts for our time series later in this study. The lapply function was used to apply the fit_func function across our nested time series in both final and test set. We assigned the outcome into 6 different lists which reperesents Tmax, Tmean and Tmin for final and test model.\nfit_func \u003c- function(residuals) { ## Order selection -- AIC n \u003c- length(residuals) norder \u003c- 4 p \u003c- c(1:norder) - 1 q \u003c- c(1:norder) - 1 aic \u003c- matrix(0, norder, norder) for (i in 1:norder) { for (j in 1:norder) { modij \u003c- arima(residuals, order = c(p[i], 0, q[j]), method = 'ML') aic[i, j] \u003c- modij$aic - 2 * (p[i] + q[j] + 1) + 2 * (p[i] + q[j] + 1) * n / (n - p[i] - q[j] - 2) } } #aicv \u003c- as.vector(aic) #plot(aicv, ylab=\"AIC values\") indexaic \u003c- which(aic == min(aic), arr.ind = TRUE) porder \u003c- indexaic[1, 1] - 1 qorder \u003c- indexaic[1, 2] - 1 # Final residuals model residuals.model \u003c- arima(residuals, order = c(porder, 0, qorder), method = \"ML\") return(residuals.model) } lapply(residual_tmin, fit_func) %\u003e% set_names(names(residual_tmin)) -\u003e Tmin_residual_models lapply(residual_tmean, fit_func) %\u003e% set_names(names(residual_tmean)) -\u003e Tmean_residual_models lapply(residual_tmax, fit_func) %\u003e% set_names(names(residual_tmean)) -\u003e Tmax_residual_models lapply(test_residual_tmin, fit_func) %\u003e% set_names(names(test_residual_tmin)) -\u003e Tmin_test_residuals lapply(test_residual_tmean, fit_func) %\u003e% set_names(names(test_residual_tmean)) -\u003e Tmean_test_residuals lapply(test_residual_tmax, fit_func) %\u003e% set_names(names(test_residual_tmax)) -\u003e Tmax_test_residuals 5.3 Forecasting We will Forecast the average max, min and mean temperature for each month of 2020. We have to forecast the trend, seasonal components and rthe residuals which would then be combined to give our actual forecasts. Earlier in this analysis we observed that our best model for harmonics were splitted into 5 different configurations, we will implement similar solution here creating 5 different functions based on the 5 configurations. The functions were applied to their respective group of time series data and this gave us the final predictions for our models.\npredict_har2 \u003c- function(residuals.model, final_model, poly_order) { ahead \u003c- 12 pred.res \u003c- predict(residuals.model, n.ahead = ahead)$pred TIME.NEW \u003c- seq(from = 2020, by = 1 / 12, length = ahead) SIN.NEW \u003c- COS.NEW \u003c- matrix(nrow = length(TIME.NEW), ncol = 6) for (i in 1:6) { SIN.NEW[, i] \u003c- sin(2 * pi * i * TIME.NEW) COS.NEW[, i] \u003c- cos(2 * pi * i * TIME.NEW) } pred_combined \u003c- predict(final_model, newdata = data.frame( TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE), SIN = SIN.NEW[, c(1, 2)], COS = COS.NEW[, c(1, 2)] )) love \u003c- pred.res +pred_combined return(love) } predict_har3_A \u003c- function(residuals.model, final_model, poly_order) { ahead \u003c- 12 pred.res \u003c- predict(residuals.model, n.ahead = ahead)$pred TIME.NEW \u003c- seq(from = 2020, by = 1 / 12, length = ahead) SIN.NEW \u003c- COS.NEW \u003c- matrix(nrow = length(TIME.NEW), ncol = 6) for (i in 1:6) { SIN.NEW[, i] \u003c- sin(2 * pi * i * TIME.NEW) COS.NEW[, i] \u003c- cos(2 * pi * i * TIME.NEW) } pred_combined \u003c- predict(final_model, newdata = data.frame( TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE), #This is timeseries and param specific SIN = SIN.NEW[, c(1, 2)], COS = COS.NEW[, c(1, 2, 3)] )) love \u003c- pred.res +pred_combined return(love) } predict_har3_B \u003c- function(residuals.model, final_model, poly_order) { ahead \u003c- 12 pred.res \u003c- predict(residuals.model, n.ahead = ahead)$pred TIME.NEW \u003c- seq(from = 2020, by = 1 / 12, length = ahead) SIN.NEW \u003c- COS.NEW \u003c- matrix(nrow = length(TIME.NEW), ncol = 6) for (i in 1:6) { SIN.NEW[, i] \u003c- sin(2 * pi * i * TIME.NEW) COS.NEW[, i] \u003c- cos(2 * pi * i * TIME.NEW) } pred_combined \u003c- predict(final_model, newdata = data.frame( TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE), #This is timeseries and param specific SIN = SIN.NEW[, c(1, 2)], COS = COS.NEW[, c(1, 2, 4)] )) love \u003c- pred_combined +pred.res return(love) } predict_har3_C \u003c- function(residuals.model, final_model, poly_order) { ahead \u003c- 12 pred.res \u003c- predict(residuals.model, n.ahead = ahead)$pred TIME.NEW \u003c- seq(from = 2020, by = 1 / 12, length = ahead) SIN.NEW \u003c- COS.NEW \u003c- matrix(nrow = length(TIME.NEW), ncol = 6) for (i in 1:6) { SIN.NEW[, i] \u003c- sin(2 * pi * i * TIME.NEW) COS.NEW[, i] \u003c- cos(2 * pi * i * TIME.NEW) } pred_combined \u003c- predict(final_model, newdata = data.frame( TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE), #This is timeseries and param specific SIN = SIN.NEW[, c(1, 2, 5)], COS = COS.NEW[, c(1, 2)] )) love \u003c- pred_combined +pred.res return(love) } predict_har4 \u003c- function(residuals.model, final_model, poly_order) { ahead \u003c- 12 pred.res \u003c- predict(residuals.model, n.ahead = ahead)$pred TIME.NEW \u003c- seq(from = 2020, by = 1 / 12, length = ahead) SIN.NEW \u003c- COS.NEW \u003c- matrix(nrow = length(TIME.NEW), ncol = 6) for (i in 1:6) { SIN.NEW[, i] \u003c- sin(2 * pi * i * TIME.NEW) COS.NEW[, i] \u003c- cos(2 * pi * i * TIME.NEW) } pred_combined \u003c- predict(final_model, newdata = data.frame( TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE), #This is timeseries and param specific SIN = SIN.NEW[, c(1, 2, 4)], COS = COS.NEW[, c(1, 2, 3)] )) love \u003c- pred_combined +pred.res return(love) #plot(time.all,Tmin_2019$Northern_Ireland,type = 'l',xlim = c(2000, 2021)) #lines(TIME.NEW,pred + pred.res,col = 'red',lwd = 2) } predict_test \u003c- function(residuals.model, final_model) { ahead \u003c- 12 pred.res \u003c- predict(residuals.model, n.ahead = ahead)$pred TIME.NEW \u003c- seq(from = 2020, by = 1 / 12, length = ahead) SIN.NEW \u003c- COS.NEW \u003c- matrix(nrow = length(TIME.NEW), ncol = 6) for (i in 1:6) { SIN.NEW[, i] \u003c- sin(2 * pi * i * TIME.NEW) COS.NEW[, i] \u003c- cos(2 * pi * i * TIME.NEW) } pred_combined \u003c- predict(final_model, newdata = data.frame( TIME = poly(TIME.NEW, degree = 2, raw = TRUE), #This is timeseries and param specific SIN = SIN.NEW[, c(1, 2)], COS = COS.NEW[, c(1, 2)] )) love \u003c- pred_combined +pred.res return(love) #plot(time.all,Tmin_2019$Northern_Ireland,type = 'l',xlim = c(2000, 2021)) #lines(TIME.NEW,pred + pred.res,col = 'red',lwd = 2) } -TMIN MODELS\nTmin_har2_residuals \u003c- Tmin_residual_models[names(best_model_TMIN[-c(3, 9)])] Tmin_har2_model \u003c- Tmin_final_model[names(best_model_TMIN[-c(3, 9)])] mapply(predict_har2, Tmin_har2_residuals, Tmin_har2_model, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmin_har2 ##################################################################### Tmin_har3_B_residuals \u003c- Tmin_residual_models[names(best_model_TMIN[c(3)])] Tmin_har3_B_model \u003c- Tmin_final_model[names(best_model_TMIN[c(3)])] mapply(predict_har3_B, Tmin_har3_B_residuals, Tmin_har3_B_model, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmin_har3_B ##################################################################### Tmin_har3_C_residuals \u003c- Tmin_residual_models[names(best_model_TMIN[c(9)])] Tmin_har3_C_model \u003c- Tmin_final_model[names(best_model_TMIN[c(9)])] mapply(predict_har3_C, Tmin_har3_C_residuals, Tmin_har3_C_model, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmin_har3_C #######################COMBINE ALL TMIN############################################## do.call( c, list( final_predict_Tmin_har2, final_predict_Tmin_har3_B, final_predict_Tmin_har3_C ) ) -\u003e Tmin_final_predictions # prediction validation check length(names(Tmin_final_predictions)) -TMEAN MODELS\nTmean_har2_residuals \u003c- Tmean_residual_models[names(best_model_TMean[-c(4)])] Tmean_har2_model \u003c- Tmean_final_model[names(best_model_TMean[-c(4)])] mapply(predict_har2, Tmean_har2_residuals, Tmean_har2_model, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmean_har2 ##################################################################### Tmean_har3_A_residuals \u003c- Tmean_residual_models[names(best_model_TMIN[c(4)])] Tmean_har3_A_model \u003c- Tmean_final_model[names(best_model_TMIN[c(4)])] mapply(predict_har3_A, Tmean_har3_A_residuals, Tmean_har3_A_model, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmean_har3_A #######################COMBINE ALL TMEAN############################################## do.call(c, list(final_predict_Tmean_har2, final_predict_Tmean_har3_A)) -\u003e Tmean_final_predictions # prediction validation check length(names(Tmean_final_predictions)) -TMAX MODELS\nTmax_har3_A_residuals_ln \u003c- Tmax_residual_models[names(best_model_TMax_ln[1:5])] Tmax_har3_A_model_ln \u003c- Tmax_final_model[names(best_model_TMax_ln[1:5])] mapply(predict_har3_A, Tmax_har3_A_residuals_ln, Tmax_har3_A_model_ln, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmax_ln_har3_A ##################################################################### Tmax_har2_residuals_ln \u003c- Tmax_residual_models[names(best_model_TMax_ln[c(6, 8)])] Tmax_har2_model_ln \u003c- Tmax_final_model[names(best_model_TMax_ln[c(6, 8)])] mapply(predict_har2, Tmax_har2_residuals_ln, Tmax_har2_model_ln, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmax_ln_har2 ##################################################################### Tmax_har4_residuals_ln \u003c- Tmax_residual_models[names(best_model_TMax_ln[c(7)])] Tmax_har4_model_ln \u003c- Tmax_final_model[names(best_model_TMax_ln[c(7)])] mapply(predict_har4, Tmax_har4_residuals_ln, Tmax_har4_model_ln, 1, SIMPLIFY = FALSE) -\u003e final_predict_Tmax_ln_har4 ##################################################################### Tmax_har2_residuals_cb \u003c- Tmax_residual_models[names(best_model_TMax_cubic)] Tmax_har2_model_cb \u003c- Tmax_final_model[names(best_model_TMax_cubic)] mapply(predict_har2, Tmax_har2_residuals_cb, Tmax_har2_model_cb, 3, SIMPLIFY = FALSE) -\u003e final_predict_Tmax_cb_har2 #######################COMBINE ALL TMAX############################################## do.call( c, list( final_predict_Tmax_ln_har3_A, final_predict_Tmax_ln_har2, final_predict_Tmax_ln_har4, final_predict_Tmax_cb_har2 ) ) -\u003e Tmax_final_predictions # prediction validation check length(names(Tmax_final_predictions)) mapply(predict_test, Tmin_test_residuals, Tmin_test_model[sorted_district], SIMPLIFY = FALSE) -\u003e Tmin_test_pred mapply(predict_test, Tmean_test_residuals, Tmean_test_model[sorted_district], SIMPLIFY = FALSE) -\u003e Tmean_test_pred mapply(predict_test, Tmax_test_residuals, Tmax_test_model[sorted_district], SIMPLIFY = FALSE) -\u003e Tmax_test_pred 5.4 Model Comparison We will be evaluating the accuracy of our predictions using the accuracy function of the forecast library, we used the subsetted time series of 2020 data for all our time series as the actual while outcome of our predictions for 2020 as the predicted. We are going to observe our models performance with unseen data not used when fitting the model. The mapply function was used to apply the model_accuracy function across all our different time series predictions for best test and final.\nmodel_accuracy \u003c- function(y.pred, y.ts) { y.actual \u003c- window(y.ts, start = 2020) accuracy(y.pred, y.actual) } mapply(model_accuracy, Tmin_final_predictions[sorted_district], Tmin[sorted_district], SIMPLIFY = FALSE) -\u003e Tmin_accuracy mapply(model_accuracy, Tmean_final_predictions[sorted_district], Tmean[sorted_district], SIMPLIFY = FALSE) -\u003e Tmean_accuracy mapply(model_accuracy, Tmax_final_predictions[sorted_district], Tmax[sorted_district], SIMPLIFY = FALSE) -\u003e Tmax_accuracy mapply(model_accuracy, Tmin_test_pred[sorted_district], Tmin[sorted_district], SIMPLIFY = FALSE) -\u003e Tmin_accuracy_test mapply(model_accuracy, Tmean_test_pred[sorted_district], Tmean[sorted_district], SIMPLIFY = FALSE) -\u003e Tmean_accuracy_test mapply(model_accuracy, Tmax_test_pred[sorted_district], Tmax[sorted_district], SIMPLIFY = FALSE) -\u003e Tmax_accuracy_test get_rmse\u003c-function(x,y){ y[[x]][2]-\u003e a return(a) } #function to get rmse of all time series get_all_rmse \u003c- function(Tmin,Tmean,Tmax){ lapply(names(Tmin), get_rmse,y=Tmin) %\u003e% set_names(names(Tmin)) %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() %\u003e% set_names(\"Tmin_rmse\") -\u003e Tmin_rmse lapply(names(Tmean), get_rmse,y=Tmean) %\u003e% set_names(names(Tmean)) %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() %\u003e% set_names(\"Tmean_rmse\") -\u003e Tmean_rmse lapply(names(Tmax), get_rmse,y=Tmax) %\u003e% set_names(names(Tmax)) %\u003e% as.data.frame() %\u003e% t() %\u003e% as.data.frame() %\u003e% set_names(\"Tmax_rmse\") -\u003e Tmax_rmse return(cbind(Tmin_rmse,Tmean_rmse,Tmax_rmse)) } We observe the rmse for our models below, we can see the rmse for both the test model and final model, we observed that for some regions the test model performed better than the final model according to the rmse figures in the tables below.\nget_all_rmse(Tmin_accuracy,Tmean_accuracy,Tmax_accuracy) get_all_rmse(Tmin_accuracy_test,Tmean_accuracy_test,Tmax_accuracy_test) We focused our analysis on the values from the test model predictions, final model predictions and the actual predictions for the South wales and North wales region, a plot was implemented and we observe that the plots are similar for the three different variables for north and south wales.\nTmin_test_pred$England_NW_and_N_Wales %\u003e% as.data.frame() %\u003e% set_names(\"test_predictions\")-\u003e test_N_wales Tmin_final_predictions$England_NW_and_N_Wales %\u003e% as.data.frame() %\u003e% set_names(\"final_predictions\") -\u003e final_N_wales Tmin$England_NW_and_N_Wales %\u003e% window(start = 2020) -\u003e England_NW_and_N_Wales_actual England_NW_and_N_Wales_actual %\u003e% as.data.frame()%\u003e% set_names(\"Actual\") -\u003e actual_N_wales cbind.data.frame(test_N_wales,final_N_wales,actual_N_wales) Tmin_test_pred$England_SW_and_S_Wales %\u003e% as.data.frame() %\u003e% set_names(\"test_predictions\")-\u003e test_S_wales Tmin_final_predictions$England_SW_and_S_Wales %\u003e% as.data.frame() %\u003e% set_names(\"final_predictions\") -\u003e final_S_wales Tmin$England_SW_and_S_Wales %\u003e% window(start = 2020) -\u003e England_SW_and_S_Wales_actual England_SW_and_S_Wales_actual %\u003e% as.data.frame()%\u003e% set_names(\"Actual\") -\u003e actual_S_wales cbind.data.frame(test_S_wales,final_S_wales,actual_S_wales) par(mfrow=c(3,3)) plot(test_N_wales,main = \"Test predictions North wales\") plot(final_N_wales,main = \"Final predictions North wales\") plot(actual_N_wales,main = \"Actual North wales\") plot(test_S_wales,main = \"Test predictions South wales\") plot(final_S_wales,main = \"Final predictions South wales\") plot(actual_S_wales,main = \"Actual predictions South wales\") ",
+  "wordCount" : "8312",
+  "inLanguage": "en",
+  "datePublished": "2023-03-04T09:13:17Z",
+  "dateModified": "2023-03-04T09:13:17Z",
+  "author":{
+    "@type": "Person",
+    "name": "Muizz Kolapo"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://muizzkolapo.github.io/blog/docs/weather_analysis/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Muizzkolapo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://muizzkolapo.github.io/blog/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://muizzkolapo.github.io/blog/" accesskey="h" title="Muizzkolapo (Alt + H)">Muizzkolapo</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://muizzkolapo.github.io/blog/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://muizzkolapo.github.io/blog/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://muizzkolapo.github.io/blog/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      UK Weather Time series analysis
+    </h1>
+    <div class="post-meta"><span title='2023-03-04 09:13:17 +0000 UTC'>March 4, 2023</span>&nbsp;·&nbsp;40 min&nbsp;·&nbsp;Muizz Kolapo
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="abstract">Abstract<a hidden class="anchor" aria-hidden="true" href="#abstract">#</a></h1>
+<p>Forecasting temperature by the use of advance statistical tools is very
+important in understanding and dealing with the effects of rising or
+decreasing temperatures. This study uses Time series analysis and
+predictions, a statistical methods to analyze and forecast temperatures,
+by using the average max, min and mean temperature for each month of
+different regions in the United Kingdom measured by the Met Office. The
+increase in concerns about the effects of rising or decreasing
+temperature on humans, animals, the climate, oceans, and seasonal
+patterns provokes the need for accurate models for forecasting the
+temperatures of the different regions across the globe. This report
+presents the results of forecasting temperatures using trend analysis,
+seasonality estimation through seasonal averages and seasonal harmonics,
+the final model were selected using the autoregressive integrated moving
+average models</p>
+<pre tabindex="0"><code>library(magrittr)
+library(knitr)
+library(tseries)
+library(forecast)
+</code></pre><h1 id="1-data-collection">1. DATA COLLECTION<a hidden class="anchor" aria-hidden="true" href="#1-data-collection">#</a></h1>
+<p>The data used for this study was gotten from the Met Office website
+where we sourced for the average max, min and mean temperature for each
+month for 10 different districts in the UK. This gave us 30 different
+time series to work with, In order to collect the data from this website
+without having to download all the individual files or read in the files
+individually, a function was created, which takes two arguments; the
+region(district) and the temperature(parameter), For each desired time
+series data, the function reads in the data, transform it using the time
+series function and outputs a time series data from 1884 to 2020 at a
+frequency of 12 observations per year which reperesents each individual
+monthly average in a year. The time series data was saved in a nested
+lists for each of the different parameters which made the it easy to
+work with the massive count of this data.</p>
+<pre tabindex="0"><code>#We created a function that takes region and district and imports the data from the Metoffice website.
+# Create a list of all regions
+districts &lt;- c(&#34;Northern_Ireland&#34;,
+
+               &#34;Scotland_N&#34;,
+
+               &#34;Scotland_E&#34;,
+
+               &#34;Scotland_W&#34;,
+
+               &#34;England_E_and_NE&#34;,
+
+               &#34;England_NW_and_N_Wales&#34;,
+
+               &#34;Midlands&#34;,
+
+               &#34;East_Anglia&#34;,
+
+               &#34;England_SW_and_S_Wales&#34;,
+
+               &#34;England_SE_and_Central_S&#34;
+
+)
+
+ 
+# create a list of all Parameters
+features &lt;- c(&#34;Tmin&#34;, &#34;Tmean&#34;, &#34;Tmax&#34;)
+
+ 
+# indicate template of the url
+address &lt;-&#34;https://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/&#34;
+
+ 
+# Create a function that reads in files from the website
+read.ts &lt;- function(district, feature){
+
+  c(address, feature, &#34;/date/&#34;, district, &#34;.txt&#34;) %&gt;%
+
+  paste(collapse = &#34;&#34;) %&gt;%
+
+  read.table(header = TRUE, skip = 5, nrow = 137) %&gt;%
+
+  subset(select = 2:13) %&gt;%
+
+  t() %&gt;%
+
+  as.vector() %&gt;%
+
+  ts(frequency = 12, end = c(2020, 12))
+
+}
+</code></pre><pre tabindex="0"><code># Function to apply the read.ts function to a list
+feature_select &lt;- function(x) {
+  lapply(districts, read.ts, feature = x) %&gt;%
+    set_names(districts)
+}
+</code></pre><pre tabindex="0"><code># Implement the feature_select  function
+all_data &lt;- lapply(features, feature_select) %&gt;% set_names(features)
+Tmin &lt;- all_data$Tmin
+Tmean &lt;- all_data$Tmean
+Tmax &lt;- all_data$Tmax
+</code></pre><h1 id="2-minimum-and-maximum-evaluation">2. Minimum and Maximum evaluation<a hidden class="anchor" aria-hidden="true" href="#2-minimum-and-maximum-evaluation">#</a></h1>
+<p>Two functions were developed to identify the district and date (year and
+month) of the highest and the lowest max, min and mean temperature. All
+our time series data are stored in three groups of temperature
+parameter, which is a nested list a function was created and we employed
+the lapply function to apply this function across the respective lists
+within each group of parameters. The output of the implementation of
+this function shows that for the average monthly minimum temperature;</p>
+<ul>
+<li>The region with the highest temperature is England_SE_and_Central_S
+, and the date is Aug , 1997</li>
+<li>The region with the lowest temperature is Scotland_E , and the date
+is Jan , 1895&quot;</li>
+</ul>
+<p>The region with the lowest and highest temperature measurement for the
+average monthly maximum temperature is;</p>
+<ul>
+<li>The region with the highest temperature is East_Anglia , and the
+date is Jul , 2006</li>
+<li>The region with the lowest temperature is Midlands , and the date is
+Feb , 1947</li>
+</ul>
+<p>Finally, the region with the lowest and highest temperature measurement
+for the average monthly mean temperature is;</p>
+<ul>
+<li>The region with the highest temperature is East_Anglia , and the
+date is Jul , 2006</li>
+<li>The region with the lowest temperature is Scotland_E , and the date
+is Jan , 1895</li>
+</ul>
+<pre tabindex="0"><code># Function to return the maximum value in nested list
+max_eval &lt;- function(x) {
+  names(x)[which.max(unlist(lapply(x, FUN = max)))] -&gt; region
+  month.abb[(time(x[[region]])[which.max(x[[region]])] %% 1) * 12 + 1] -&gt; month
+  floor(time(x[[region]])[which.max(x[[region]])]) -&gt; year
+  paste(
+    &#34;The region with the highest temperature for&#34;,
+    deparse(substitute(x)),
+    &#34;is&#34;,
+    region,
+    &#34;,&#34;,
+    &#34;and the date is&#34;,
+    month,
+    &#34;,&#34;,
+    year
+  )
+}
+</code></pre><pre tabindex="0"><code># Function to return the minimum value in nested list
+min_eval &lt;- function(x) {
+  names(x)[which.min(unlist(lapply(x, FUN = min)))] -&gt; region
+  month.abb[(time(x[[region]])[which.min(x[[region]])] %% 1) * 12 + 1] -&gt; month
+  floor(time(x[[region]])[which.min(x[[region]])]) -&gt; year
+  paste(
+    &#34;The region with the lowest temperature for&#34;,
+    deparse(substitute(x)),
+    &#34;is&#34;,
+    region,
+    &#34;,&#34;,
+    &#34;and the date is&#34;,
+    month,
+    &#34;,&#34;,
+    year
+  )
+}
+</code></pre><pre tabindex="0"><code># Call min-max evaluating function
+max_eval(Tmin)
+min_eval(Tmin)
+max_eval(Tmax)
+min_eval(Tmax)
+max_eval(Tmean)
+min_eval(Tmean)
+</code></pre><h1 id="3----exploratory-data-analysis">3 &ndash; Exploratory Data Analysis<a hidden class="anchor" aria-hidden="true" href="#3----exploratory-data-analysis">#</a></h1>
+<p>We performed some exploratory analysis on the time series data and
+explores some questions about the time series data as seen below.</p>
+<h3 id="which-district-is-the-coldestwarmest">Which district is the coldest/warmest?<a hidden class="anchor" aria-hidden="true" href="#which-district-is-the-coldestwarmest">#</a></h3>
+<p>We will be estimating the coldest and warmest region using the following
+criteria. We have the time series data for the mean daily maximum air
+temperature, the mean daily minimum and the mean of air for the regions.
+We will find the coldest region by finding the region with the
+highest/lowest temperature across these three groups of time series data
+measured. We observed that the output using this criteria varies among
+the three different groups of time seris. This can be seen in the output
+below.</p>
+<ul>
+<li>The region with the highest average monthly mean temperature is
+England_SE_and_Central_S , While the region with the lowest
+temperature is Scotland_N</li>
+<li>The region with the highest average monthly minimum temperature is
+England_SW_and_S_Wales, While the region with the lowest
+temperature is Scotland_E</li>
+<li>The region with the highest average monthly maximum temperature is
+England_SE_and_Central_S, While the region with the lowest
+temperature is Scotland_N</li>
+</ul>
+<pre tabindex="0"><code>#creating a function to check average values for any time series parameter given
+avg_temp &lt;- function(x) {
+  lapply(x, mean) -&gt; tmp_val
+  names(tmp_val)[which.max(unlist(lapply(tmp_val, FUN = max)))] -&gt; warmest
+  names(tmp_val)[which.min(unlist(lapply(tmp_val, FUN = min)))] -&gt; coldest
+  result &lt;-
+    paste(
+      &#34;The region with the highest temperature average for&#34;,
+      deparse(substitute(x)),
+      &#34;is&#34;,
+      warmest,
+      &#34;, While the region with the lowest temperature is&#34;,
+      coldest
+    )
+  return(result)
+}
+</code></pre><pre tabindex="0"><code>avg_temp(Tmean)
+avg_temp(Tmin)
+avg_temp(Tmax)
+</code></pre><h3 id="which-district-has-the-widest-temperature-range">Which district has the widest temperature range?<a hidden class="anchor" aria-hidden="true" href="#which-district-has-the-widest-temperature-range">#</a></h3>
+<p>We created a function that takes returns the highest range for a list of
+time series data. This was applied to three groups of time series data
+and we observed that for average monthly mean temperature and average
+monthly minimum temperature East_Anglia and England_SE_and_Central_S had
+the widest range but for the average monthly maximum temperature we
+observed that East Anglia had the widest range of temperatures.</p>
+<pre tabindex="0"><code>widest_range &lt;- function(takes_list) {
+  lapply(takes_list, min) %&gt;% as.data.frame() - lapply(takes_list, max) %&gt;% as.data.frame() -&gt; range_diff
+  range_diff[which(range_diff %in% apply(range_diff, 1, min))] -&gt; widest_range
+  return(widest_range)
+}
+</code></pre><pre tabindex="0"><code>widest_range(Tmean)
+widest_range(Tmin)
+widest_range(Tmax)
+</code></pre><h3 id="are-winterssummers-getting-colderhotter">Are winters/summers getting colder/hotter?<a hidden class="anchor" aria-hidden="true" href="#are-winterssummers-getting-colderhotter">#</a></h3>
+<p>We employed data wrangling techniques to group our time series data into
+two different seasons (winter and summer). We created a function to
+convert all time series object to data frame of each season(winter and
+summer). Each row in the dataframe represents a year and the months for
+a specific season. This function was applied to the average monthly mean
+temperature, this gives a summary of the occurence for each months in a
+particular season. A function was then developed to merge all the
+seasonal dataframe from each region into a single group for a specific
+season and this was converted to a time series object using the function
+ts(). The new time series data was then visualized on a time series plot
+and we observed that the mean temperature for winter months has an
+upward trend while that of summer months has a downward trend, this
+means winters are getting hotter while summers are getting colder.</p>
+<pre tabindex="0"><code>winter &lt;- c(&#34;Dec&#34;, &#34;Jan&#34;, &#34;Feb&#34;, &#34;Year&#34;)
+summer &lt;- c(&#34;Jun&#34;, &#34;Jul&#34;, &#34;Aug&#34;, &#34;Year&#34;)
+
+get_season &lt;- function(Tparameter, seas_param) {
+  #convert to dataframe
+  dmn &lt;- list(month.abb, unique(floor(time(Tparameter))))
+  as.data.frame(t(matrix(Tparameter , 12, dimnames = dmn))) -&gt; ts_df
+  #add year to dataframe
+  ts_df$Year &lt;- seq(1884, 2020)
+  #subset data into seasons
+  season &lt;- seas_param
+  #add to new variable
+  ts_df[season] -&gt; season
+  return(season)
+}
+</code></pre><pre tabindex="0"><code>lapply(Tmean, get_season,seas_param=summer)-&gt;sum_mons
+lapply(Tmean, get_season,seas_param=winter)-&gt;win_mons
+</code></pre><pre tabindex="0"><code>merge_avg_all &lt;- function(season_mons) {
+  my_merge &lt;- function(df1, df2) {
+    merge(df1, df2, by = &#39;Year&#39;)
+  }
+  
+  #merge all dataframe inside Parameter list to one
+  Reduce(my_merge, season_mons) -&gt; regions_tmp_seas
+  
+  
+  #getting yearly average for all regions
+  regions_tmp_seas$testMean &lt;- rowMeans(regions_tmp_seas[, -1])
+  
+  
+  #selecting year and average of all regions
+  regions_mean &lt;- regions_tmp_seas[c(&#39;Year&#39;, &#39;testMean&#39;)]
+  
+  
+  #convert back to TS
+  regions_mean  %&gt;% subset(select = 2) %&gt;% t() %&gt;% as.vector() %&gt;% ts(frequency = 1, end = c(2020, 1)) -&gt; final_Temp
+  
+  return(final_Temp)
+  
+  
+}
+</code></pre><pre tabindex="0"><code>plot(merge_avg_all(win_mons),main=&#34;Average Winter Temperature Trend&#34;,xlab=&#34;Year&#34;,ylab=&#34;Mean Temperature&#34;)
+plot(merge_avg_all(sum_mons),main=&#34;Average Summer Temperature Trend&#34;,xlab=&#34;Year&#34;,ylab=&#34;Mean Temperature&#34;)
+</code></pre><p><img loading="lazy" src="download.png" alt="Temp1"  />
+
+<img loading="lazy" src="download1.png" alt="Temp2"  />
+</p>
+<h3 id="4----trend-and-seasonality-estimation">4 &ndash; Trend and Seasonality Estimation<a hidden class="anchor" aria-hidden="true" href="#4----trend-and-seasonality-estimation">#</a></h3>
+<p>We created a function to subset the time series data For each district,
+and considering the 3 time series: max temp, min temp and mean temp,
+from 1884 until December 2019. This was implemented using the ts()
+function which takes start of the series, frequency of the series, and
+end of the series. We created a function that subsets our time series
+from 1884 - 2019 called &ldquo;subset_2019&rdquo; which was then applied to the
+entire 30 time series data set. The Lapply function is one used to apply
+a function to every element in a list, since our 3 groups of time series
+are stored as a nested list the lapply function was used to apply our
+subset_2019 function on the 3 different groups of our time series data
+Tmin, Tmax, Tmean to subset the 30 time series data from 1884-2019. We
+manually created a time vector for our time series &ldquo;time.all&rdquo; which will
+be used extensively in this analysis.</p>
+<pre tabindex="0"><code>#function to Subset each of the 30 time series until December 2019
+subset_2019 &lt;- function(x) {
+  x %&gt;% head(-12)
+}
+</code></pre><pre tabindex="0"><code>#subset all groups of time series data to december 2019 using subset_2019 function
+lapply(Tmin, subset_2019) -&gt; Tmin_2019
+lapply(Tmean, subset_2019) -&gt; Tmean_2019
+lapply(Tmax, subset_2019) -&gt; Tmax_2019
+</code></pre><pre tabindex="0"><code># manually create time range
+time.all &lt;- seq(
+  from = start(Tmax_2019$Northern_Ireland)[1],
+  by = 1 / frequency(Tmax_2019$Northern_Ireland),
+  length.out = length(Tmax_2019$Northern_Ireland)
+)
+</code></pre><p>Compare your results and use appropriate plots and/or tables to confirm
+your observations.</p>
+<h3 id="41-estimating-trend">4.1 Estimating trend<a hidden class="anchor" aria-hidden="true" href="#41-estimating-trend">#</a></h3>
+<p>We estimated the trend of each time series using linear, quadratic and
+cubic regression. A function was developed to apply the 3 different
+order of polynomial models(linear, quadratic and cubic). The function
+&ldquo;run_model&rdquo; takes a time series data and its time vector and returns its
+linear, quadratic and cubic models. A function &ldquo;plot_model&rdquo; was created
+which returns a plot of the time series data, linear, quadratic and
+cubic models all together on a single plot. Finally, We created a
+function &ldquo;model_design&rdquo; which returns the Akaike criterion (AIC) for
+each model that was passed into its arguments.We are working with data
+nested into a list and as such we will create a function that can apply
+the model_design function to a list of time series, this new function
+was called &ldquo;apply_model_design&rdquo;. This function &ldquo;apply_model_design&rdquo; will
+return a list of AIC values for the linear, quadratic and cubic models.
+We then used the apply_model_design on the three groups of time series
+data we have. The application of this function gives us the AIC value of
+each region for the different parameters(TMIN,TMEAN and TMAX).</p>
+<pre tabindex="0"><code>#Function to return models
+run_model &lt;- function(data, time) {
+  l_model &lt;- lm(data ~ poly(time, degree = 1, raw = TRUE))
+  q_model &lt;- lm(data ~ poly(time, degree = 2, raw = TRUE))
+  c_model &lt;- lm(data ~ poly(time, degree = 3, raw = TRUE))
+  
+  return(list(
+    l_model = l_model,
+    q_model = q_model,
+    c_model = c_model
+  ))
+}
+</code></pre><pre tabindex="0"><code>#Function to return a plot
+plot_model &lt;- function(data, time,main) {
+  l_var_name &lt;- lm(data ~ poly(time, degree = 1, raw = TRUE))
+  q_var_name &lt;- lm(data ~ poly(time, degree = 2, raw = TRUE))
+  c_var_name &lt;- lm(data ~ poly(time, degree = 3, raw = TRUE))
+  
+  
+  xlab &lt;- &#34;Year&#34;
+  ylab &lt;- &#34;Temperature&#34;
+  
+  
+  
+
+  plot(
+    data,
+    main = main,
+    ylab = ylab,
+    xlab = xlab,
+    xlim = c(1880, 2025),
+    lwd = 1,
+    type = &#34;l&#34;
+  )
+  lines(
+    time,
+    fitted(l_var_name),
+    lwd = 5,
+    col = &#39;red&#39;,
+    lty = &#34;dotdash&#34;
+  )
+  lines(
+    time,
+    fitted(q_var_name),
+    lwd = 5,
+    col = &#39;green&#39;,
+    lty = &#34;dotdash&#34;
+  )
+  lines(
+    time,
+    fitted(c_var_name),
+    lwd = 5,
+    col = &#39;yellow&#39;,
+    lty = &#34;dotdash&#34;
+  )
+}
+</code></pre><pre tabindex="0"><code>#Function to return a list of AIC of different models used for each group of time series
+model_design &lt;- function(data, time, var_name, poly_degree) {
+  var_name &lt;- lm(data ~ poly(time, degree = poly_degree, raw = TRUE))
+  Var_AIC &lt;- AIC(var_name)
+  
+  main &lt;- &#34;Average Temperature from 1879&#34;
+  xlab &lt;- &#34;Year&#34;
+  ylab &lt;- &#34;Temp&#34;
+  
+  
+  
+  
+  
+  return(list(Var_AIC = Var_AIC))
+}
+</code></pre><pre tabindex="0"><code>#Function that applies the model_design function to a list and returns list of list
+apply_model_design &lt;- function(my_list) {
+  lapply(
+    my_list,
+    model_design,
+    var_name = &#39;linear&#39;,
+    poly_degree = 1,
+    time = time.all
+  ) -&gt; linear.models
+  lapply(
+    my_list,
+    model_design,
+    var_name = &#39;quadratic&#39;,
+    poly_degree = 2,
+    time = time.all
+  )  -&gt; quadratic.models
+  lapply(
+    my_list,
+    model_design,
+    var_name = &#39;cubic&#39;,
+    poly_degree = 3,
+    time = time.all
+  ) -&gt; cubic.models
+  
+  all_list &lt;-
+    list(
+      linear.models = linear.models,
+      quadratic.models = quadratic.models,
+      cubic.models = cubic.models
+    )
+  
+  return(all_list)
+  
+}
+</code></pre><pre tabindex="0"><code>#apply the apply_model_design function on different groups of Time series
+apply_model_design(Tmin_2019)-&gt; Tmin_models
+apply_model_design(Tmax_2019)-&gt; Tmax_models
+apply_model_design(Tmean_2019)-&gt; Tmean_models
+</code></pre><p>Select a trend model for each time series using an appropriate criteria.
+Are the models selected all the same? If not is there a pattern
+depending on the region and/or the group (max, min and mean)?</p>
+<h3 id="42-trend-selection">4.2 Trend Selection<a hidden class="anchor" aria-hidden="true" href="#42-trend-selection">#</a></h3>
+<p>We created a function &ldquo;which_model&rdquo; which helps select the best model
+for a time series, we have the linear, quadratic and cubic AIC values
+for each region, we will use this function to find the model with the
+least Akaike criterion(AIC) values which signifies the best model for
+the time series data. The which_model() function when applied to a list
+of different time series data returns a dataframe which has a column
+&ldquo;Best.Model&rdquo; which shows the row-wise minimum for each region since each
+row represents a region and its linear, quadratic and cubic models for a
+specific parameter. It was observed that all the regions had their best
+model as the linear model except for two regions(England_E_and_NE and
+East_Anglia) in the average monthly maximum temperature (Tmax)
+parameter. The table for best models for each region for a specific
+parameter can be found below.</p>
+<pre tabindex="0"><code># Function to return the best model
+which_model &lt;- function(Model_parameter) {
+  Model_parameter$linear.models %&gt;% as.data.frame() -&gt; l
+  names(l) &lt;- c(names(Model_parameter$linear.models))
+  
+  Model_parameter$quadratic.models %&gt;% as.data.frame() -&gt; q
+  names(q) &lt;- c(names(Model_parameter$quadratic.models))
+  
+  Model_parameter$cubic.models %&gt;% as.data.frame() -&gt; c
+  names(c) &lt;- c(names(Model_parameter$cubic.models))
+  
+  ModelAIC &lt;- c(&#34;Linear&#34;, &#34;Quadratic&#34;, &#34;Cubic&#34;)
+  
+  cbind(ModelAIC, rbind(l, q, c)) -&gt; tminbind
+  
+  tminbind %&gt;% as.vector() %&gt;% t() %&gt;% as.data.frame() -&gt; new
+  
+  names(new) &lt;- as.matrix(new[1,])
+  new &lt;- new[-1,]
+  new[] &lt;- lapply(new, function(x)
+    type.convert(as.character(x)))
+  
+  new$Best.Model &lt;- colnames(new)[apply(new, 1, FUN = which.min)]
+  return(new)
+}
+</code></pre><h6 id="best-model-by-region-for-average-monthly-minimum-temperature">Best Model by region for Average monthly minimum temperature<a hidden class="anchor" aria-hidden="true" href="#best-model-by-region-for-average-monthly-minimum-temperature">#</a></h6>
+<pre tabindex="0"><code>which_model(Tmin_models) 
+</code></pre><h6 id="best-model-by-region-for-average-monthly-mean-temperature">Best Model by region for Average monthly mean temperature<a hidden class="anchor" aria-hidden="true" href="#best-model-by-region-for-average-monthly-mean-temperature">#</a></h6>
+<pre tabindex="0"><code>which_model(Tmean_models)
+</code></pre><h6 id="best-model-by-region-for-average-monthly-maximum-temperature">Best Model by region for Average monthly maximum temperature<a hidden class="anchor" aria-hidden="true" href="#best-model-by-region-for-average-monthly-maximum-temperature">#</a></h6>
+<pre tabindex="0"><code>which_model(Tmax_models)
+</code></pre><p>As stated above we observed that all our model choice for all regions
+are uniform except England_E_and_NE and East_Anglia for the Tmax
+parameter, it would be interesting to see a plot of the linear model vs
+plot of the cubic model. We used the function &ldquo;plot_model&rdquo; created above
+to implement these plots and we observe that there is a difference in
+the plots for the different regions, while Northern Ireland has a more
+stable trend, we can see that England_E_and_NE and East_Anglia do have
+some cubic trend.</p>
+<pre tabindex="0"><code>plot_model(Tmax_2019$England_E_and_NE,time.all,&#34;Trend of Average monthly maximum temperature England_E_and_NE&#34;)
+</code></pre><p><img loading="lazy" src="trend.png" alt="trend"  />
+</p>
+<pre tabindex="0"><code>plot_model(Tmax_2019$East_Anglia,time.all,&#34;Trend of Average monthly maximum temperature East_Anglia&#34;)
+</code></pre><p><img loading="lazy" src="trend1.png" alt="trend1"  />
+</p>
+<pre tabindex="0"><code>plot_model(Tmax_2019$Northern_Ireland,time.all,&#34;Trend of Average monthly maximum temperature Northern_Ireland&#34;)
+</code></pre><p><img loading="lazy" src="trend2.png" alt="trend2"  />
+</p>
+<h3 id="43-estimating-seasonality-using-seasonal-means-and-harmonic-models">4.3 Estimating seasonality using seasonal means and harmonic models<a hidden class="anchor" aria-hidden="true" href="#43-estimating-seasonality-using-seasonal-means-and-harmonic-models">#</a></h3>
+<h6 id="431-removing-trend-using-averaging">4.3.1 removing Trend using averaging<a hidden class="anchor" aria-hidden="true" href="#431-removing-trend-using-averaging">#</a></h6>
+<p>We will create a function that removes the trend component and returns
+its monthly average. The function takes two arguments which are the time
+series data and the polynomial model that bests fit it according to the
+Akaike Criterion. All models except England_E_and_NE and East_Anglia
+for the Tmax parameter have a linear model as their best model. We will
+split the Tmax time series data into two groups the linear and the cubic
+groups, this would make it easier to apply functions which are specific
+to the best model for each region. We will then use the return_month_avg
+to return the seasonal means of each of the different regions based on
+their best trend model.</p>
+<pre tabindex="0"><code>
+return_month_avg &lt;- function(takes_data, model_type) {
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  data.notrend &lt;- takes_data - fitted(model.result[[model_type]])
+  
+  tapply(data.notrend, cycle(takes_data), mean)  %&gt;% as.data.frame() -&gt; fin_month_avg
+  colnames(fin_month_avg) &lt;- c(&#39;Season_Mean&#39;)
+  mymonths &lt;- c(&#34;Jan&#34;,
+                &#34;Feb&#34;,
+                &#34;Mar&#34;,
+                &#34;Apr&#34;,
+                &#34;May&#34;,
+                &#34;Jun&#34;,
+                &#34;Jul&#34;,
+                &#34;Aug&#34;,
+                &#34;Sep&#34;,
+                &#34;Oct&#34;,
+                &#34;Nov&#34;,
+                &#34;Dec&#34;)
+  #add abbreviated month name
+  fin_month_avg$Month &lt;- mymonths
+  return(fin_month_avg)
+  
+  
+}
+</code></pre><pre tabindex="0"><code># Subsetting cubic and linear model for TMAX
+Tmax_2019[-c(5,8)] -&gt; Tmax_2019_ln
+
+Tmax_2019[c(5,8)]-&gt; Tmax_2019_cubic
+</code></pre><pre tabindex="0"><code>#----Estimate seasonal average for All linear model
+lapply(Tmin_2019, return_month_avg, model_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_2019)) -&gt; Tmin_monthly_avg
+lapply(Tmean_2019, return_month_avg, model_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_2019)) -&gt; Tmean_monthly_avg
+lapply(Tmax_2019_ln, return_month_avg, model_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmax_2019_ln)) -&gt; Tmax_monthly_avg_ln
+
+#----Estimate seasonal average for All cubic model
+lapply(Tmax_2019_cubic, return_month_avg, model_type = &#34;c_model&#34;) %&gt;% set_names(names(Tmax_2019_cubic)) -&gt; Tmean_monthly_avg_cubic
+</code></pre><h6 id="sample-monthly-average-for-northern-ireland">Sample monthly average for Northern Ireland<a hidden class="anchor" aria-hidden="true" href="#sample-monthly-average-for-northern-ireland">#</a></h6>
+<pre tabindex="0"><code>Tmin_monthly_avg$Northern_Ireland
+</code></pre><p><img loading="lazy" src="seasmean.png" alt="seasmean"  />
+</p>
+<h6 id="432-estimate-seasonality-with-seasonal-average">4.3.2 Estimate seasonality with seasonal average<a hidden class="anchor" aria-hidden="true" href="#432-estimate-seasonality-with-seasonal-average">#</a></h6>
+<p>The seasonality was estimated using the seasonal means method. We
+created a function return_seas_avg which takes the time series data and
+model type. The function models the inputs and returns the seasonal
+means for each of the time series provided to it. We used lapply to
+apply the return_seas_avg to the list of time series for the different
+parameters Tmin, Tmax, Tmean.</p>
+<pre tabindex="0"><code>return_seas_avg &lt;- function(data, model_type) {
+  #one region since all months are the same
+  months &lt;- as.factor(cycle(Tmin_2019$Northern_Ireland))
+  # Apply the run_model function to the data to get the specified model
+  run_model(data, time.all) -&gt; model.result
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- data - fitted(model.result[[model_type]])
+  seas.means &lt;- lm(data.notrend ~ months - 1)
+  
+  
+  
+  return(seas.means)
+}
+</code></pre><pre tabindex="0"><code>lapply(Tmin_2019, return_seas_avg, model_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_2019)) -&gt; Tmin_seas_est
+lapply(Tmean_2019, return_seas_avg, model_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_2019)) -&gt; Tmean_seas_est
+lapply(Tmax_2019_ln, return_seas_avg, model_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmax_2019_ln)) -&gt; Tmax_seas_est_ln
+
+#All cubic model
+lapply(Tmax_2019_cubic, return_seas_avg, model_type = &#34;c_model&#34;) %&gt;% set_names(names(Tmax_2019_cubic)) -&gt; Tmax_seas_est_cubic
+#joined max
+do.call(c, list(Tmax_seas_est_ln, Tmax_seas_est_cubic)) -&gt; Tmax_ln_nd_cub_seas
+</code></pre><pre tabindex="0"><code># seasonal means validation check
+length(names(Tmin_seas_est))
+length(names(Tmean_seas_est))
+length(names(Tmax_ln_nd_cub_seas))
+</code></pre><h4 id="432-estimating-seasonality-using-harmonic-mean">4.3.2 Estimating seasonality using harmonic mean<a hidden class="anchor" aria-hidden="true" href="#432-estimating-seasonality-using-harmonic-mean">#</a></h4>
+<p>We created a function to give the harmonic mean of a time series data.
+We performed a trend check on the time series and remove the specified
+trend type(l_model,c_model and q_model). The residuals were derived by
+subtracting the data from the fitted data. In our dataset since all our
+best models are linear except for England_E_and_NE and East_Anglia for
+the average monthly maximum temperature, this means all our models will
+be linear except these two which will be cubic. In this step we applied
+the return_harmonic function to all our time series data, a check will
+be done for models that are significant at a p-value of 0.05.</p>
+<pre tabindex="0"><code># Function to return the harmonic mean of a time series data
+return_harmonic &lt;- function(takes_data, trend_type) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result[[trend_type]])
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  # Function to return harmonic of specified order
+  seasonal.har &lt;- function(order) {
+    assign(paste(c(&#34;seasonal.har&#34;, order), collapse = &#34;&#34;),
+           lm(data.notrend ~ . - 1,
+              data.frame(SIN = SIN[, 1:order], COS = COS[, 1:order])))
+    
+    
+    return(get(paste(c(
+      &#34;seasonal.har&#34;, order
+    ), collapse = &#34;&#34;)))
+    
+  }
+  
+  
+  
+  # order 1
+  seas.har1 &lt;- seasonal.har(1)
+  
+  # order 2
+  seas.har2 &lt;- seasonal.har(2)
+  
+  # order 3
+  seas.har3 &lt;- seasonal.har(3) # SIN.3 not significant
+  
+  # order 4
+  seas.har4 &lt;- seasonal.har(4) # SIN.3 COS.4 not significant
+  
+  
+  # order 5
+  seas.har5 &lt;-
+    seasonal.har(5) # SIN.3 SIN5 COS.4 COS.5 not significant
+  
+  
+  
+  # order 6
+  seas.har6 &lt;-
+    seasonal.har(6) # SIN.3 SIN5 SIN.6 COS.4 COS.5 COS.6 not significant
+  
+  
+  return(
+    list(
+      seas.har1 = seas.har1,
+      seas.har2 = seas.har2,
+      seas.har3 = seas.har3,
+      seas.har4 = seas.har4,
+      seas.har5 = seas.har5,
+      seas.har6 = seas.har6
+    )
+  )
+}
+</code></pre><pre tabindex="0"><code># Apply the return_harmonic function to all time series
+lapply(Tmin_2019, return_harmonic, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_2019)) -&gt; Tmin_harmonic
+lapply(Tmean_2019, return_harmonic, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmean_2019)) -&gt; Tmean_harmonic
+lapply(Tmax_2019_ln, return_harmonic, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmax_2019_ln)) -&gt; Tmax_harmonic_ln
+#remove the cubic trend from England_E_and_NE and East_Anglia for the Tmax parameter
+lapply(Tmax_2019_cubic, return_harmonic, trend_type = &#34;c_model&#34;) %&gt;% set_names(names(Tmax_2019_cubic)) -&gt; Tmax_harmonic_cubic
+</code></pre><h5 id="significant-models">significant models<a hidden class="anchor" aria-hidden="true" href="#significant-models">#</a></h5>
+<p>We created a function to return the significant models for a specific
+region and harmonic. We need models with a p-value lower than that of
+the null hypothesis. We create region_harmonics() function to take a
+list and apply all the function singular_harmonic using lapply() to all
+the elements in the list provided in the argument. We developed a
+function grouped_harmonica() that applies the region_harmonics function
+to a nested list. This would return only the models that has passed the
+null hypothesis test, hence containing only significant models.</p>
+<p>The Null hypothesis and alternative hypothesis are as follows:</p>
+<ul>
+<li>Null hypothesis: The model is not significant</li>
+<li>Alternative hypothesis: The model is significant</li>
+</ul>
+<pre tabindex="0"><code># p-value lesser than 0.05 shows significant that null is false
+singular_harmonic &lt;- function(x) {
+  summary(x) -&gt; temp
+  temp$coefficients %&gt;% as.data.frame() -&gt; temp2
+  temp2 &lt;- temp2[temp2$`Pr(&gt;|t|)` &lt; 0.05,]
+  temp2$Harmonic.Model &lt;- row.names(temp2)
+  #return(temp2)
+  
+  
+}
+</code></pre><pre tabindex="0"><code>
+
+region_harmonics &lt;- function(takes_list) {
+  lapply(takes_list, singular_harmonic) %&gt;%  set_names(names(takes_list)) -&gt; significant_mods
+  return(significant_mods)
+}
+</code></pre><pre tabindex="0"><code>grouped_harmonica &lt;- function(x) {
+  lapply(x, region_harmonics) %&gt;% set_names(names(x)) -&gt; Tmin_best_harmonics
+  return(Tmin_best_harmonics)
+}
+
+grouped_harmonica(Tmin_harmonic) -&gt; Tmin_indexed_harmonics
+grouped_harmonica(Tmean_harmonic) -&gt; Tmean_indexed_harmonics
+grouped_harmonica(Tmax_harmonic_ln) -&gt; Tmax.ln_indexed_harmonics
+grouped_harmonica(Tmax_harmonic_cubic) -&gt; Tmax.cub_indexed_harmonics
+</code></pre><h4 id="unique-models-across-all-time-series">Unique models across all time series<a hidden class="anchor" aria-hidden="true" href="#unique-models-across-all-time-series">#</a></h4>
+<p>We created a function that checks the unique models for each element in
+a list. This unique model would be used to then recreate the harmonic
+models. We retrieved the best harmonic for each region i.e all harmonics
+with P-value lesser than the null hypothesis p-value of 0.05. We applied
+the unique function to all our best model to retrieve only unique
+models. We observed 5 different unique configurations for our models,
+this would be used to create 5 different functions, each function will
+be specific to the unique model configurations found in the
+implementation below.</p>
+<pre tabindex="0"><code>best_harm &lt;- function(takes_list) {
+  lapply(takes_list, unique) %&gt;% set_names(names(takes_list)) -&gt; significant_harmonics
+  return(significant_harmonics)
+}
+</code></pre><pre tabindex="0"><code>Tmin_best_harmonics &lt;- best_harm(Tmin_indexed_harmonics)
+Tmean_best_harmonics &lt;- best_harm(Tmean_indexed_harmonics)
+Tmax.ln_best_harmonics &lt;- best_harm(Tmax.ln_indexed_harmonics)
+Tmax.cub_best_harmonics &lt;- best_harm(Tmax.cub_indexed_harmonics)
+</code></pre><pre tabindex="0"><code>#unique(Tmin_best_harmonics)
+best_model_list &lt;-
+  c(
+    Tmin_best_harmonics,
+    Tmean_best_harmonics,
+    Tmax.ln_best_harmonics,
+    Tmax.cub_best_harmonics
+  )
+lapply(best_model_list, unique) %&gt;%  set_names(names(best_model_list)) -&gt; all_unique_best
+</code></pre><pre tabindex="0"><code>length(unique(all_unique_best) )
+</code></pre><pre tabindex="0"><code># View unique model config
+unique(all_unique_best)
+</code></pre><h6 id="create-functions-to-map-models">create functions to map models<a hidden class="anchor" aria-hidden="true" href="#create-functions-to-map-models">#</a></h6>
+<p>Five different functions were developed inline with the 5 different
+significant harmonic models we had during the null hypothesis test. The
+functions are:</p>
+<ul>
+<li>rerun_harmonic1 - [&ldquo;SIN&rdquo; &ldquo;COS&rdquo; ] and [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo;
+&ldquo;COS.2&rdquo;]</li>
+</ul>
+<hr>
+<ul>
+<li>rerun_harmonic2 - [&ldquo;SIN&rdquo; &ldquo;COS&rdquo;], [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo;]
+and [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo; &ldquo;COS.4&rdquo;]</li>
+</ul>
+<hr>
+<ul>
+<li>rerun_harmonic3 - [&ldquo;SIN&rdquo; &ldquo;COS&rdquo;], [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo;]
+and [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;SIN.5&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo;]</li>
+</ul>
+<hr>
+<ul>
+<li>rerun_harmonic4 - [&ldquo;SIN&rdquo; &ldquo;COS&rdquo;], [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo;]
+and [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo; &ldquo;COS.3&rdquo;]</li>
+</ul>
+<hr>
+<ul>
+<li>rerun_harmonic5 - [&ldquo;SIN&rdquo; &ldquo;COS&rdquo;], [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo;],
+[&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo; &ldquo;COS.3&rdquo;] and [&ldquo;SIN.1&rdquo; &ldquo;SIN.2&rdquo;
+&ldquo;SIN.4&rdquo; &ldquo;COS.1&rdquo; &ldquo;COS.2&rdquo; &ldquo;COS.3&rdquo;]</li>
+</ul>
+<p>We observe that all significant models include the first and second
+harmonics with little variations among the other models. The functions
+takes the time series data and the best trend model for it l_model,
+q_model or c_model and returns the harmonic with the lowest Akaike
+criterion among all the harmonic models implemented within the specific
+function. Implementing this function gives us the best harmonic model
+for each of the 30 time series data we are working with.</p>
+<pre tabindex="0"><code># Function &#34;SIN.1&#34; &#34;SIN.2&#34; &#34;COS.1&#34; &#34;COS.2&#34; and  &#34;SIN&#34; &#34;COS&#34;
+rerun_harmonic1 &lt;- function(takes_data, trend_type) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result[[trend_type]])
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har1 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1]))
+  
+  
+  seas.har2 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)]))
+  
+  
+  
+  
+  list(seas.har1 = seas.har1, seas.har2 = seas.har2) -&gt; myl
+  
+  lapply(myl, AIC)  -&gt; mlk
+  
+  
+  names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -&gt; res
+  
+  return(mlk)
+  
+  
+}
+</code></pre><pre tabindex="0"><code>rerun_harmonic2 &lt;- function(takes_data, trend_type) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result[[trend_type]])
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har1 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1]))
+  
+  
+  seas.har2 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)]))
+  
+  
+  seas.har3_B &lt;-  lm(data.notrend ~ . - 1,
+                     data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 4)]))
+  
+  
+  
+  list(seas.har1 = seas.har1,
+       seas.har2 = seas.har2,
+       seas.har3_B = seas.har3_B) -&gt; myl
+  
+  lapply(myl, AIC)  -&gt; mlk
+  
+  
+  names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -&gt; res
+  
+  return(mlk)
+  
+  
+}
+</code></pre><pre tabindex="0"><code>rerun_harmonic3 &lt;- function(takes_data, trend_type) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result[[trend_type]])
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har1 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1]))
+  
+  
+  seas.har2 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)]))
+  
+  
+  seas.har3_C &lt;-  lm(data.notrend ~ . - 1,
+                     data.frame(SIN = SIN[, c(1, 2, 5)], COS = COS[, c(1, 2)]))
+  
+  
+  list(seas.har1 = seas.har1,
+       seas.har2 = seas.har2,
+       seas.har3_C = seas.har3_C) -&gt; myl
+  
+  lapply(myl, AIC)  -&gt; mlk
+  
+  
+  names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -&gt; res
+  
+  return(mlk)
+  
+}
+</code></pre><pre tabindex="0"><code>rerun_harmonic4 &lt;- function(takes_data, trend_type) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result[[trend_type]])
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har1 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1]))
+  
+  
+  seas.har2 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)]))
+  
+  
+  seas.har3_A &lt;-  lm(data.notrend ~ . - 1,
+                     data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 3)]))
+  
+  
+  list(seas.har1 = seas.har1,
+       seas.har2 = seas.har2,
+       seas.har3_A = seas.har3_A) -&gt; myl
+  
+  lapply(myl, AIC)  -&gt; mlk
+  
+  
+  names(mlk)[which.min(unlist(lapply(mlk, FUN = min)))] -&gt; res
+  
+  return(mlk)
+  
+}
+</code></pre><pre tabindex="0"><code>rerun_harmonic5 &lt;- function(takes_data, trend_type) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result[[trend_type]])
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har1 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, 1:1], COS = COS[, 1:1]))
+  
+  
+  seas.har2 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2)]))
+  
+  
+  seas.har3 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2)], COS = COS[, c(1, 2, 3)]))
+  
+  seas.har4 &lt;-  lm(data.notrend ~ . - 1,
+                   data.frame(SIN = SIN[, c(1, 2, 4)], COS = COS[, c(1, 2, 3)]))
+  
+  
+  
+  list(
+    seas.har1 = seas.har1,
+    seas.har2 = seas.har2,
+    seas.har3 = seas.har3,
+    seas.har4 = seas.har4
+  ) -&gt; myl
+  
+  lapply(myl, AIC)  -&gt; mlk
+  
+  
+  which.min(unlist(lapply(mlk, FUN = min))) -&gt; res
+  
+  return(mlk)
+  
+  
+  
+}
+</code></pre><h5 id="subset-all-the-time-series-into-groups-of-significant-harmonic-model">Subset all the time series into groups of significant harmonic model<a hidden class="anchor" aria-hidden="true" href="#subset-all-the-time-series-into-groups-of-significant-harmonic-model">#</a></h5>
+<p>We have 5 different configurations of significant harmonnic models, we
+will group each of our time series parameter (Tmin,Tmean and Tmax) to
+the significant harmonic model group they belong to among these 5
+configurations after which their respective function is then applied on
+each subset. Based on initial analysis we observed that for our average
+monthly maximum temperature we have two regions with a cubic trend model
+as their best trend model, we will create a different subset for this
+group to make the implementation of these functions on the time series
+data seamless.</p>
+<pre tabindex="0"><code>#Subset  Tmin_best_harmonics into significant harmonic groups
+Tmin_best_dual &lt;-
+  Tmin_2019[-c(3, 9)] #function rerun_harmonic1 would work for this
+lapply(Tmin_best_dual, rerun_harmonic1, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_best_dual)) -&gt; significant_Tmin_dual
+############################################################################################
+
+Tmin_best_trio1 &lt;-
+  Tmin_2019[c(3)] # function rerun_harmonic2 would work for this
+lapply(Tmin_best_trio1, rerun_harmonic2, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_best_trio1)) -&gt; significant_Tmin_trio1
+############################################################################################
+
+Tmin_best_trio2 &lt;-
+  Tmin_2019[c(9)] # rerun_harmonic3 would work on this
+lapply(Tmin_best_trio2, rerun_harmonic3, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmin_best_trio2)) -&gt; significant_Tmin_trio2
+############################################################################################
+</code></pre><pre tabindex="0"><code># Subset  Tmean_best_harmonics into significant harmonic groups
+Tmean_best_dual &lt;-
+  Tmean_2019[-c(4, 10)] #rerun_harmonic1 will work for this
+lapply(Tmean_best_dual, rerun_harmonic1, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmean_best_dual)) -&gt; significant_Tmean_dual
+############################################################################################
+
+
+Tmean_best_trio1 &lt;-
+  Tmean_2019[c(4)] # rerun_harmonic4 will work for this
+lapply(Tmean_best_trio1, rerun_harmonic4, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmean_best_trio1)) -&gt; significant_Tmean_trio1
+############################################################################################
+
+Tmean_best_trio2 &lt;-
+  Tmean_2019[c(10)] #rerun_harmonic3 this function works for this
+lapply(Tmean_best_trio2, rerun_harmonic1, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmean_best_trio2)) -&gt; significant_Tmean_trio2
+############################################################################################
+</code></pre><pre tabindex="0"><code>#Subset  Tmax.ln_best_harmonics into significant harmonic groups
+Tmax.ln_best_dual &lt;-
+  Tmax_2019_ln[c(6, 8)] #rerun_harmonic1 will work for this
+lapply(Tmax.ln_best_dual, rerun_harmonic1, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmax.ln_best_dual)) -&gt; significant_Tmax.ln_dual
+############################################################################################
+
+Tmax.ln_best_trio1 &lt;-
+  Tmax_2019_ln[-c(6, 7, 8)] # rerun_harmonic4 this will work for this
+lapply(Tmax.ln_best_trio1, rerun_harmonic4, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmax.ln_best_trio1)) -&gt; significant_Tmax.ln_trio1
+############################################################################################
+
+Tmax.ln_best_trio2 &lt;-
+  Tmax_2019_ln[c(7)] # rerun_harmonic5 should work for this
+lapply(Tmax.ln_best_trio2, rerun_harmonic5, trend_type = &#34;l_model&#34;) %&gt;% set_names(names(Tmax.ln_best_trio2)) -&gt; significant_Tmax.ln_trio2
+############################################################################################
+</code></pre><pre tabindex="0"><code>#Subset Tmax.cub_best_harmonics harmonic into significant harmonic groups
+#Tmax.cub_best_harmonics[c(1,2)]
+Tmax.cubic_best_dual &lt;-
+  Tmax_2019_cubic[c(1, 2)] #rerun_harmonic1 this functipn will work for this
+lapply(Tmax.cubic_best_dual, rerun_harmonic1, trend_type = &#34;c_model&#34;) %&gt;% set_names(names(Tmax.cubic_best_dual)) -&gt; significant_Tmax.cub_trio2
+############################################################################################
+</code></pre><h1 id="44-seasonal-model-selection-seasonal-average-or-harmonic-models">4.4 Seasonal model selection Seasonal average or harmonic models?<a hidden class="anchor" aria-hidden="true" href="#44-seasonal-model-selection-seasonal-average-or-harmonic-models">#</a></h1>
+<p>• Select a seasonal model for each time series using an appropriate
+criteria. Are the models selected all the same? If not is there a
+pattern depending on the region and/or the group (max, min and mean)? We
+now have the different significant harmonic models and the seasonal
+means of all our time series, we will use the Akaike Criterion to
+determine the best model for each time series data, as stated above the
+model with the least AIC will be the best model for the specific time
+series data.</p>
+<h5 id="create-a-function-that-selects-best-model-for-all-different-parameters">create a function that selects best model for all different parameters<a hidden class="anchor" aria-hidden="true" href="#create-a-function-that-selects-best-model-for-all-different-parameters">#</a></h5>
+<p>We created a function get_min_AIC that takes 3 arguments the
+district/region, the best harmonic model, and the seasonal average and
+returns the model with the lowest Akaike criterion. In this function we
+combine the AIC of the seasonal average model of the time series and the
+AIC of the harmonic model and then return the model with the lowest AIC.</p>
+<pre tabindex="0"><code>get_min_AIC &lt;- function(x, y, z) {
+  AIC(z[[x]]) -&gt; seas.avg
+  y [[x]]  -&gt; temp1
+  temp1 &lt;- c(temp1, seas.avg = seas.avg)
+  
+  names(temp1)[which.min(unlist(lapply(temp1, FUN = min)))] -&gt; res
+  
+  
+  return(res)
+}
+</code></pre><h5 id="all-tmin">All TMIN<a hidden class="anchor" aria-hidden="true" href="#all-tmin">#</a></h5>
+<p>We used the do.call function to re-combine our different configurations
+for TMIN parameter into one list for each parameter. The get_min_AIC
+method was then applied on each time series to return the model with the
+lowest AIC and we observe that seasonal average was not the best for any
+of the time series in this group.</p>
+<pre tabindex="0"><code>do.call(c,
+        list(
+          significant_Tmin_dual,
+          significant_Tmin_trio1,
+          significant_Tmin_trio2
+        )) -&gt; Tmin_harm_final
+lapply(districts, get_min_AIC, y = Tmin_harm_final, z = Tmin_seas_est) %&gt;% set_names(districts) -&gt; best_model_TMIN
+best_model_TMIN %&gt;% as.data.frame() %&gt;%  t() %&gt;%  as.data.frame() -&gt;Tmin.best
+names(Tmin.best)[1] &lt;- &#34;Best Model Tmin&#34;
+Tmin.best
+</code></pre><p><img loading="lazy" src="tmin.png" alt="tmin"  />
+</p>
+<h5 id="all-tmean">ALl TMEAN<a hidden class="anchor" aria-hidden="true" href="#all-tmean">#</a></h5>
+<p>We used the do.call function to re-combine our different configurations
+for TMEAN parameter into one list for each parameter. The get_min_AIC
+method was then applied on each time series to return the model with the
+lowest AIC and we observe that seasonal average was not the best for any
+of the time series in this group.</p>
+<pre tabindex="0"><code>do.call(c,
+        list(
+          significant_Tmean_dual,
+          significant_Tmean_trio1,
+          significant_Tmean_trio2
+        )) -&gt; Tmean_harm_final
+lapply(districts, get_min_AIC, y = Tmean_harm_final, z = Tmean_seas_est) %&gt;% set_names(districts) -&gt; best_model_TMean
+best_model_TMean %&gt;% as.data.frame() %&gt;%  t() %&gt;%  as.data.frame() -&gt; Tmean.best
+names(Tmean.best)[1] &lt;- &#34;Best Models Tmean&#34;
+Tmean.best
+</code></pre><p><img loading="lazy" src="tmean.png" alt="tmean"  />
+</p>
+<h5 id="all-tmax">ALL Tmax<a hidden class="anchor" aria-hidden="true" href="#all-tmax">#</a></h5>
+<p>We combined the time series with a linear trend into a single list and
+applied the get_min_AIC and the same was done for time series with a
+cubic trend.</p>
+<pre tabindex="0"><code>do.call(
+  c,
+  list(
+    significant_Tmax.ln_dual,
+    significant_Tmax.ln_trio1,
+    significant_Tmax.ln_trio2
+  )
+) -&gt; Tmax_harm_final_ln
+
+significant_Tmax.cub_trio2 -&gt; Tmax_harm_final_cubic
+
+linear_districts &lt;- names(Tmax_2019)[-c(5, 8)]
+lapply(linear_districts, get_min_AIC, y = Tmax_harm_final_ln, z = Tmax_seas_est_ln) %&gt;% set_names(linear_districts) -&gt; best_model_TMax_ln
+best_model_TMax_ln %&gt;% as.data.frame() %&gt;%  t() %&gt;% as.data.frame() -&gt; Tmax.ln.best
+names(Tmax.ln.best)[1] &lt;- &#34;Best Models Tmax&#34;
+
+cubic_district &lt;- names(Tmax_2019)[c(5, 8)]
+lapply(cubic_district, get_min_AIC, y = Tmax_harm_final_cubic, z = Tmax_seas_est_cubic) %&gt;% set_names(cubic_district) -&gt; best_model_TMax_cubic
+best_model_TMax_cubic %&gt;% as.data.frame() %&gt;%  t() %&gt;% as.data.frame() -&gt; Tmax.cb.best
+names(Tmax.cb.best)[1] &lt;- &#34;Best Models Tmax&#34;
+
+rbind.data.frame(Tmax.ln.best,Tmax.cb.best)
+</code></pre><p><img loading="lazy" src="tmax.png" alt="tmax"  />
+</p>
+<p>We used the unique function to check the unique best models for each
+group of our time series and we can see we have 5 different best models
+distributed among the different time series data. Similar to the
+approach used above, we will create 5 functions that models our combined
+trend model and seasonal models for each time series data. <strong>Unique
+Models</strong></p>
+<pre tabindex="0"><code>list(
+  unique(best_model_TMIN),
+  unique(best_model_TMean),
+  unique(best_model_TMax_ln),
+  unique(best_model_TMax_cubic)
+) %&gt;%  unlist() %&gt;% unique()
+</code></pre><pre tabindex="0"><code>list(
+  unique(best_model_TMIN),
+  unique(best_model_TMean),
+  unique(best_model_TMax_ln),
+  unique(best_model_TMax_cubic)
+) %&gt;%  unlist() %&gt;% unique() %&gt;%  length()
+</code></pre><h1 id="45-building-combined-model-for-trend-and-seasonality">4.5 Building combined model for trend and seasonality<a hidden class="anchor" aria-hidden="true" href="#45-building-combined-model-for-trend-and-seasonality">#</a></h1>
+<p>We have 5 different best model distributed among the different groups of
+time series, we will create 5 functions to implement the combine models
+based on the groups each time series data belongs to, we will subset the
+time series into their respective groups and apply these functions
+across the respective groups. Finally, We combined all the different
+models for the time series into a variable called &ldquo;final&rdquo;.</p>
+<pre tabindex="0"><code># function for model with Seasonal harmonic 2 as the best model
+combined_mod_har2 &lt;- function(data, poly_order) {
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har2 &lt;- lm(data ~ .,
+                  data = data.frame(
+                    TIME = poly(time.all, poly_order, raw = TRUE),
+                    SIN = SIN[, c(1, 2)],
+                    COS = COS[, c(1, 2)]
+                  ))
+  
+  
+  #print(summary(get(paste(c(&#34;seasonal.har&#34;,order), collapse = &#34;&#34;))))
+  
+  return(seas.har2)
+  
+}
+</code></pre><pre tabindex="0"><code># function for model with Seasonal harmonic 3 A as the best model
+combined_mod_har3_A &lt;- function(data, poly_order) {
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har3_A &lt;- lm(data ~ .,
+                    data = data.frame(
+                      TIME = poly(time.all, poly_order, raw = TRUE),
+                      SIN = SIN[, c(1, 2)],
+                      COS = COS[, c(1, 2, 3)]
+                    ))
+  
+  
+  #print(summary(get(paste(c(&#34;seasonal.har&#34;,order), collapse = &#34;&#34;))))
+  
+  return(seas.har3_A)
+  
+}
+</code></pre><pre tabindex="0"><code># function for model with Seasonal harmonic 3 B as the best model
+combined_mod_har3_B &lt;- function(data, poly_order) {
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har3_B &lt;- lm(data ~ .,
+                    data = data.frame(
+                      TIME = poly(time.all, poly_order, raw = TRUE),
+                      SIN = SIN[, c(1, 2)],
+                      COS = COS[, c(1, 2, 4)]
+                    ))
+  
+  
+  
+  
+  #print(summary(get(paste(c(&#34;seasonal.har&#34;,order), collapse = &#34;&#34;))))
+  
+  return(seas.har3_B)
+  
+}
+</code></pre><pre tabindex="0"><code># function for model with Seasonal harmonic 3 C as the best model
+combined_mod_har3_C &lt;- function(data, poly_order) {
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har3_C &lt;- lm(data ~ .,
+                    data = data.frame(
+                      TIME = poly(time.all, poly_order, raw = TRUE),
+                      SIN = SIN[, c(1, 2, 5)],
+                      COS = COS[, c(1, 2)]
+                    ))
+  
+  
+  #print(summary(get(paste(c(&#34;seasonal.har&#34;,order), collapse = &#34;&#34;))))
+  
+  return(seas.har3_C)
+  
+  
+}
+</code></pre><pre tabindex="0"><code># function for model with Seasonal harmonic 4 as the best model
+combined_mod_har4 &lt;- function(data, poly_order) {
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  seas.har4 &lt;- lm(data ~ .,
+                  data = data.frame(
+                    TIME = poly(time.all, poly_order, raw = TRUE),
+                    SIN = SIN[, c(1, 2, 4)],
+                    COS = COS[, c(1, 2, 3)]
+                  ))
+  
+  
+  
+  
+  #print(summary(get(paste(c(&#34;seasonal.har&#34;,order), collapse = &#34;&#34;))))
+  
+  return(seas.har4)
+  
+  
+}
+</code></pre><pre tabindex="0"><code>#subset for each model that belog to specific hars
+Tmin_har2_district &lt;- Tmin_2019[names(best_model_TMIN[-c(3, 9)])]
+lapply(Tmin_har2_district, combined_mod_har2, poly_order = 1) -&gt; final_model_Tmin_har2
+#####################################################################
+
+Tmin_har3_B_district &lt;- Tmin_2019[names(best_model_TMIN[c(3)])]
+lapply(Tmin_har3_B_district, combined_mod_har3_B, poly_order = 1) -&gt; final_model_Tmin_har3_B
+#####################################################################
+
+Tmin_har3_C_district &lt;- Tmin_2019[names(best_model_TMIN[c(9)])]
+lapply(Tmin_har3_C_district, combined_mod_har3_C, poly_order = 1) -&gt; final_model_Tmin_har3_C
+#####################################################################
+
+
+#######################COMBINE ALL TMIN##############################################
+
+do.call(c,
+        list(
+          final_model_Tmin_har2,
+          final_model_Tmin_har3_B,
+          final_model_Tmin_har3_C
+        )) -&gt; Tmin_final_model  
+</code></pre><pre tabindex="0"><code># time series count validation check
+length(names(Tmin_final_model))
+</code></pre><pre tabindex="0"><code>Tmean_har2_district &lt;- Tmean_2019[names(best_model_TMean[-c(4)])]
+lapply(Tmean_har2_district, combined_mod_har2, poly_order = 1) -&gt; final_model_Tmean_har2
+#####################################################################
+
+
+Tmean_har3_A_district &lt;- Tmean_2019[names(best_model_TMean[c(4)])]
+lapply(Tmean_har3_A_district, combined_mod_har3_A, poly_order = 1) -&gt; final_model_Tmean_har3_A
+#####################################################################
+
+#######################COMBINE ALL TMEAN##############################################
+
+do.call(c, list(final_model_Tmean_har2, final_model_Tmean_har3_A)) -&gt; Tmean_final_model  
+</code></pre><pre tabindex="0"><code># time series count validation check
+length(names(Tmean_final_model))
+</code></pre><pre tabindex="0"><code>Tmax_har3_A_district_ln &lt;- Tmax_2019[names(best_model_TMax_ln[1:5])]
+lapply(Tmax_har3_A_district_ln, combined_mod_har3_A, poly_order = 1) %&gt;% set_names(names(Tmax_har3_A_district_ln)) -&gt; final_model_Tmax_har3_A
+#####################################################################
+
+
+Tmax_har2_district_ln &lt;- Tmax_2019[names(best_model_TMax_ln[c(6, 8)])]
+lapply(Tmax_har2_district_ln, combined_mod_har2, poly_order = 1) %&gt;% set_names(names(Tmax_har2_district_ln)) -&gt; final_model_Tmax_ln_har2
+#####################################################################
+
+Tmax_har4_district_ln &lt;- Tmax_2019[names(best_model_TMax_ln[c(7)])]
+lapply(Tmax_har4_district_ln, combined_mod_har4, poly_order = 1) %&gt;% set_names(names(Tmax_har4_district_ln)) -&gt; final_model_Tmax_ln_har4
+#####################################################################
+
+Tmax_har2_district_cb &lt;- Tmax_2019[names(best_model_TMax_cubic)]
+lapply(Tmax_har2_district_cb, combined_mod_har2, poly_order = 3) %&gt;% set_names(names(Tmax_har2_district_cb)) -&gt; final_model_Tmax_cb_har2
+#####################################################################
+#######################COMBINE ALL TMAX##############################################
+
+do.call(
+  c,
+  list(
+    final_model_Tmax_har3_A,
+    final_model_Tmax_ln_har2,
+    final_model_Tmax_ln_har4,
+    final_model_Tmax_cb_har2
+  )
+) -&gt; Tmax_final_model  
+</code></pre><pre tabindex="0"><code># time series count validation check
+length(names(Tmax_final_model))
+</code></pre><pre tabindex="0"><code>#---FINAL MODEL
+list(Tmin_final_model=Tmin_final_model, Tmean_final_model=Tmean_final_model,Tmax_final_model=Tmax_final_model) -&gt; final
+</code></pre><h1 id="46-creating-test-set-using-a-combined-quadratic-and-sin-cosine-of-order-2-models">4.6 Creating test set using a combined quadratic and sin-cosine (of order 2) models.<a hidden class="anchor" aria-hidden="true" href="#46-creating-test-set-using-a-combined-quadratic-and-sin-cosine-of-order-2-models">#</a></h1>
+<p>A function return_quad_sin_cos was created to Estimate trend and
+seasonality using a combined quadratic and sin-cosine (of order 2)
+models. We created a function to apply the return_quad_sin_cos on a
+nested list called def_temp. The final outputs were joined into a list
+and called test.</p>
+<pre tabindex="0"><code># Function to return the harmonic mean of a time series data
+return_quad_sin_cos &lt;- function(takes_data) {
+  # Apply the run_model function to the data to get the specified model
+  run_model(takes_data, time.all) -&gt; model.result
+  
+  # Get the residuals from the data which does not have the trend
+  data.notrend &lt;- takes_data - fitted(model.result$q_model)
+  
+  # Create a matrix of SINE and COSINE values
+  SIN &lt;- COS &lt;- matrix(nrow = length(time.all), ncol = 6)
+  for (i in 1:6) {
+    SIN[, i] &lt;- sin(2 * pi * i * time.all)
+    COS[, i] &lt;- cos(2 * pi * i * time.all)
+  }
+  
+  # Function to return harmonic of specified order
+  seasonal.har &lt;- function(order) {
+    assign(paste(c(&#34;seasonal.har&#34;, order), collapse = &#34;&#34;),
+           lm(data.notrend ~ . - 1,
+              data.frame(SIN = SIN[, 1:order], COS = COS[, 1:order])))
+    
+    return(get(paste(c(
+      &#34;seasonal.har&#34;, order
+    ), collapse = &#34;&#34;)))
+    
+  }
+  
+  
+  # order 2
+  seas.har2 &lt;- seasonal.har(2)
+  
+  
+  
+  return(seas.har2)
+}
+</code></pre><pre tabindex="0"><code>#function that applies lapply
+def_temp &lt;- function(takes_list) {
+  lapply(takes_list, return_quad_sin_cos) %&gt;% set_names(names(takes_list))  -&gt; res
+  return(res)
+}
+
+list_param &lt;-
+  list(
+    &#34;Tmin_2019&#34; = Tmin_2019,
+    &#34;Tmean_2019&#34; = Tmean_2019,
+    &#34;Tmax_2019&#34; = Tmax_2019
+  )
+
+lapply(list_param, def_temp)  -&gt; test
+</code></pre><h1 id="5-arma-and-forecasting">5 ARMA and Forecasting<a hidden class="anchor" aria-hidden="true" href="#5-arma-and-forecasting">#</a></h1>
+<h3 id="51-retrieving-the-residuals-for-test-and-final-models">5.1 Retrieving the residuals for test and final models<a hidden class="anchor" aria-hidden="true" href="#51-retrieving-the-residuals-for-test-and-final-models">#</a></h3>
+<p>We subsetted the final and test model into subsets of the component
+parameters (Tmax,Tmean and Tmin), a function was created to derive the
+residuals for both final and test models. The mapply function was used
+to dervive the residuals by subtracting the combined model(final and
+test) from the original time series data. We removed trend and
+seasonality from each of the 30 time series for both the final and test
+model and hence we now have 60 residuals time series.</p>
+<pre tabindex="0"><code>final$Tmin_final_model -&gt; Tmin_final_model
+final$Tmean_final_model -&gt; Tmean_final_model
+final$Tmax_final_model -&gt; Tmax_final_model
+</code></pre><pre tabindex="0"><code>test$Tmin_2019 -&gt; Tmin_test_model
+test$Tmean_2019 -&gt; Tmean_test_model
+test$Tmax_2019 -&gt; Tmax_test_model
+</code></pre><pre tabindex="0"><code>residuals_func &lt;- function(ts_data,final_model){
+residuals &lt;- ts_data - final_model %&gt;% fitted()
+return(residuals)
+}
+</code></pre><pre tabindex="0"><code>#to apply mapply create a variable sorted names
+sorted_district &lt;- sort(names(Tmin_2019))
+</code></pre><pre tabindex="0"><code>#we had to sort cause mapply works only on sorted
+mapply(residuals_func, Tmin_2019[sorted_district], Tmin_final_model[sorted_district], SIMPLIFY = FALSE) -&gt; residual_tmin
+mapply(residuals_func, Tmean_2019[sorted_district], Tmean_final_model[sorted_district], SIMPLIFY = FALSE) -&gt; residual_tmean
+mapply(residuals_func, Tmax_2019[sorted_district], Tmax_final_model[sorted_district], SIMPLIFY = FALSE) -&gt; residual_tmax
+</code></pre><pre tabindex="0"><code>#we had to sort cause mapply works only on sorted
+mapply(residuals_func, Tmin_2019[sorted_district], Tmin_test_model[sorted_district], SIMPLIFY = FALSE) -&gt; test_residual_tmin
+mapply(residuals_func, Tmean_2019[sorted_district], Tmean_test_model[sorted_district], SIMPLIFY = FALSE) -&gt; test_residual_tmean
+mapply(residuals_func, Tmax_2019[sorted_district], Tmax_test_model[sorted_district], SIMPLIFY = FALSE) -&gt; test_residual_tmax
+</code></pre><h3 id="52-fit-the-residuals-with-an-appropriate-arma-model">5.2 Fit the residuals with an appropriate ARMA model.<a hidden class="anchor" aria-hidden="true" href="#52-fit-the-residuals-with-an-appropriate-arma-model">#</a></h3>
+<p>To fit a arma model to all our time series we created a function
+&ldquo;fit_fun&rdquo; which takes a residual as an argument and returns a model for
+our residuals. This was used to create forecasts for our time series
+later in this study. The lapply function was used to apply the fit_func
+function across our nested time series in both final and test set. We
+assigned the outcome into 6 different lists which reperesents Tmax,
+Tmean and Tmin for final and test model.</p>
+<pre tabindex="0"><code>fit_func &lt;- function(residuals) {
+  ## Order selection -- AIC
+  n &lt;- length(residuals)
+  norder &lt;- 4
+  
+  p &lt;- c(1:norder) - 1
+  q &lt;- c(1:norder) - 1
+  
+  aic &lt;- matrix(0, norder, norder)
+  
+  for (i in 1:norder) {
+    for (j in 1:norder) {
+      modij &lt;- arima(residuals,
+                     order = c(p[i], 0, q[j]),
+                     method = &#39;ML&#39;)
+      
+      aic[i, j] &lt;-
+        modij$aic - 2 * (p[i] + q[j] + 1) + 2 * (p[i] + q[j] + 1) * n / (n - p[i] -
+                                                                           q[j] - 2)
+    }
+  }
+  
+  #aicv &lt;- as.vector(aic)
+  
+  #plot(aicv, ylab=&#34;AIC values&#34;)
+  
+  indexaic &lt;- which(aic == min(aic), arr.ind = TRUE)
+  
+  porder &lt;- indexaic[1, 1] - 1
+  qorder &lt;- indexaic[1, 2] - 1
+  # Final residuals model
+  residuals.model &lt;-
+    arima(residuals,
+          order = c(porder, 0, qorder),
+          method = &#34;ML&#34;)
+  return(residuals.model)
+}
+</code></pre><pre tabindex="0"><code>lapply(residual_tmin, fit_func) %&gt;% set_names(names(residual_tmin)) -&gt; Tmin_residual_models
+lapply(residual_tmean, fit_func) %&gt;% set_names(names(residual_tmean)) -&gt; Tmean_residual_models
+lapply(residual_tmax, fit_func) %&gt;% set_names(names(residual_tmean)) -&gt; Tmax_residual_models
+</code></pre><pre tabindex="0"><code>lapply(test_residual_tmin, fit_func) %&gt;% set_names(names(test_residual_tmin)) -&gt; Tmin_test_residuals
+lapply(test_residual_tmean, fit_func) %&gt;% set_names(names(test_residual_tmean)) -&gt; Tmean_test_residuals
+lapply(test_residual_tmax, fit_func) %&gt;% set_names(names(test_residual_tmax)) -&gt; Tmax_test_residuals
+</code></pre><h3 id="53-forecasting">5.3 Forecasting<a hidden class="anchor" aria-hidden="true" href="#53-forecasting">#</a></h3>
+<p>We will Forecast the average max, min and mean temperature for each
+month of 2020. We have to forecast the trend, seasonal components and
+rthe residuals which would then be combined to give our actual
+forecasts. Earlier in this analysis we observed that our best model for
+harmonics were splitted into 5 different configurations, we will
+implement similar solution here creating 5 different functions based on
+the 5 configurations. The functions were applied to their respective
+group of time series data and this gave us the final predictions for our
+models.</p>
+<pre tabindex="0"><code>predict_har2 &lt;- function(residuals.model, final_model, poly_order) {
+  ahead &lt;- 12
+  
+  pred.res &lt;- predict(residuals.model, n.ahead = ahead)$pred
+  
+  
+  TIME.NEW &lt;- seq(from = 2020,
+                  by = 1 / 12,
+                  length = ahead)
+  SIN.NEW &lt;- COS.NEW &lt;- matrix(nrow = length(TIME.NEW), ncol = 6)
+  
+  for (i in 1:6) {
+    SIN.NEW[, i] &lt;- sin(2 * pi * i * TIME.NEW)
+    COS.NEW[, i] &lt;- cos(2 * pi * i * TIME.NEW)
+  }
+  pred_combined &lt;-
+    predict(final_model,
+            newdata = data.frame(
+              TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE),
+              SIN = SIN.NEW[, c(1, 2)],
+              COS = COS.NEW[, c(1, 2)]
+            ))
+  
+  
+  love &lt;- pred.res +pred_combined
+  return(love)
+}
+</code></pre><pre tabindex="0"><code>predict_har3_A &lt;-
+  function(residuals.model, final_model, poly_order) {
+    ahead &lt;- 12
+    
+    pred.res &lt;- predict(residuals.model, n.ahead = ahead)$pred
+    
+    
+    TIME.NEW &lt;- seq(from = 2020,
+                    by = 1 / 12,
+                    length = ahead)
+    SIN.NEW &lt;- COS.NEW &lt;- matrix(nrow = length(TIME.NEW), ncol = 6)
+    
+    for (i in 1:6) {
+      SIN.NEW[, i] &lt;- sin(2 * pi * i * TIME.NEW)
+      COS.NEW[, i] &lt;- cos(2 * pi * i * TIME.NEW)
+    }
+    pred_combined &lt;-
+      predict(final_model,
+              newdata = data.frame(
+                TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE),
+                #This is timeseries and param specific
+                SIN = SIN.NEW[, c(1, 2)],
+                COS = COS.NEW[, c(1, 2, 3)]
+              ))
+    love &lt;- pred.res +pred_combined
+    return(love)
+  }
+</code></pre><pre tabindex="0"><code>predict_har3_B &lt;- function(residuals.model, final_model, poly_order) {
+  ahead &lt;- 12
+  
+  pred.res &lt;- predict(residuals.model, n.ahead = ahead)$pred
+  
+  
+  TIME.NEW &lt;- seq(from = 2020,
+                  by = 1 / 12,
+                  length = ahead)
+  SIN.NEW &lt;- COS.NEW &lt;- matrix(nrow = length(TIME.NEW), ncol = 6)
+  
+  for (i in 1:6) {
+    SIN.NEW[, i] &lt;- sin(2 * pi * i * TIME.NEW)
+    COS.NEW[, i] &lt;- cos(2 * pi * i * TIME.NEW)
+  }
+  pred_combined &lt;-
+    predict(final_model,
+            newdata = data.frame(
+              TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE),
+              #This is timeseries and param specific
+              SIN = SIN.NEW[, c(1, 2)],
+              COS = COS.NEW[, c(1, 2, 4)]
+            ))
+   love &lt;- pred_combined +pred.res
+  return(love)
+}
+</code></pre><pre tabindex="0"><code>predict_har3_C &lt;- function(residuals.model, final_model, poly_order) {
+  ahead &lt;- 12
+  
+  pred.res &lt;- predict(residuals.model, n.ahead = ahead)$pred
+  
+  
+  TIME.NEW &lt;- seq(from = 2020,
+                  by = 1 / 12,
+                  length = ahead)
+  SIN.NEW &lt;- COS.NEW &lt;- matrix(nrow = length(TIME.NEW), ncol = 6)
+  
+  for (i in 1:6) {
+    SIN.NEW[, i] &lt;- sin(2 * pi * i * TIME.NEW)
+    COS.NEW[, i] &lt;- cos(2 * pi * i * TIME.NEW)
+  }
+  pred_combined &lt;-
+    predict(final_model,
+            newdata = data.frame(
+              TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE),
+              #This is timeseries and param specific
+              SIN = SIN.NEW[, c(1, 2, 5)],
+              COS = COS.NEW[, c(1, 2)]
+            ))
+      love &lt;- pred_combined +pred.res
+  
+  return(love)
+}
+</code></pre><pre tabindex="0"><code>predict_har4 &lt;- function(residuals.model, final_model, poly_order) {
+  ahead &lt;- 12
+  
+  pred.res &lt;- predict(residuals.model, n.ahead = ahead)$pred
+  
+  
+  TIME.NEW &lt;- seq(from = 2020,
+                  by = 1 / 12,
+                  length = ahead)
+  SIN.NEW &lt;- COS.NEW &lt;- matrix(nrow = length(TIME.NEW), ncol = 6)
+  
+  for (i in 1:6) {
+    SIN.NEW[, i] &lt;- sin(2 * pi * i * TIME.NEW)
+    COS.NEW[, i] &lt;- cos(2 * pi * i * TIME.NEW)
+  }
+  pred_combined &lt;-
+    predict(final_model,
+            newdata = data.frame(
+              TIME = poly(TIME.NEW, degree = poly_order, raw = TRUE),
+              #This is timeseries and param specific
+              SIN = SIN.NEW[, c(1, 2, 4)],
+              COS = COS.NEW[, c(1, 2, 3)]
+            ))
+  
+    love &lt;- pred_combined +pred.res
+  return(love)
+  
+  #plot(time.all,Tmin_2019$Northern_Ireland,type = &#39;l&#39;,xlim = c(2000, 2021))
+  #lines(TIME.NEW,pred + pred.res,col = &#39;red&#39;,lwd = 2)
+}
+</code></pre><pre tabindex="0"><code>predict_test &lt;- function(residuals.model, final_model) {
+  ahead &lt;- 12
+  
+  pred.res &lt;- predict(residuals.model, n.ahead = ahead)$pred
+  
+  
+  TIME.NEW &lt;- seq(from = 2020,
+                  by = 1 / 12,
+                  length = ahead)
+  SIN.NEW &lt;- COS.NEW &lt;- matrix(nrow = length(TIME.NEW), ncol = 6)
+  
+  for (i in 1:6) {
+    SIN.NEW[, i] &lt;- sin(2 * pi * i * TIME.NEW)
+    COS.NEW[, i] &lt;- cos(2 * pi * i * TIME.NEW)
+  }
+  pred_combined &lt;-
+    predict(final_model,
+            newdata = data.frame(
+              TIME = poly(TIME.NEW, degree = 2, raw = TRUE),
+              #This is timeseries and param specific
+              SIN = SIN.NEW[, c(1, 2)],
+              COS = COS.NEW[, c(1, 2)]
+            ))
+  
+  love &lt;- pred_combined +pred.res
+  return(love)
+  
+  #plot(time.all,Tmin_2019$Northern_Ireland,type = &#39;l&#39;,xlim = c(2000, 2021))
+  #lines(TIME.NEW,pred + pred.res,col = &#39;red&#39;,lwd = 2)
+}
+</code></pre><p>-TMIN MODELS</p>
+<pre tabindex="0"><code>Tmin_har2_residuals &lt;-
+  Tmin_residual_models[names(best_model_TMIN[-c(3, 9)])]
+Tmin_har2_model &lt;- Tmin_final_model[names(best_model_TMIN[-c(3, 9)])]
+mapply(predict_har2,
+       Tmin_har2_residuals,
+       Tmin_har2_model,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmin_har2
+
+
+#####################################################################
+Tmin_har3_B_residuals &lt;-
+  Tmin_residual_models[names(best_model_TMIN[c(3)])]
+Tmin_har3_B_model &lt;- Tmin_final_model[names(best_model_TMIN[c(3)])]
+mapply(predict_har3_B,
+       Tmin_har3_B_residuals,
+       Tmin_har3_B_model,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmin_har3_B
+
+
+#####################################################################
+Tmin_har3_C_residuals &lt;-
+  Tmin_residual_models[names(best_model_TMIN[c(9)])]
+Tmin_har3_C_model &lt;- Tmin_final_model[names(best_model_TMIN[c(9)])]
+mapply(predict_har3_C,
+       Tmin_har3_C_residuals,
+       Tmin_har3_C_model,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmin_har3_C
+
+
+#######################COMBINE ALL TMIN##############################################
+
+do.call(
+  c,
+  list(
+    final_predict_Tmin_har2,
+    final_predict_Tmin_har3_B,
+    final_predict_Tmin_har3_C
+  )
+) -&gt; Tmin_final_predictions
+# prediction validation check
+length(names(Tmin_final_predictions))
+</code></pre><p>-TMEAN MODELS</p>
+<pre tabindex="0"><code>Tmean_har2_residuals &lt;-
+  Tmean_residual_models[names(best_model_TMean[-c(4)])]
+Tmean_har2_model &lt;-
+  Tmean_final_model[names(best_model_TMean[-c(4)])]
+mapply(predict_har2,
+       Tmean_har2_residuals,
+       Tmean_har2_model,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmean_har2
+#####################################################################
+Tmean_har3_A_residuals &lt;-
+  Tmean_residual_models[names(best_model_TMIN[c(4)])]
+Tmean_har3_A_model &lt;-
+  Tmean_final_model[names(best_model_TMIN[c(4)])]
+mapply(predict_har3_A,
+       Tmean_har3_A_residuals,
+       Tmean_har3_A_model,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmean_har3_A
+#######################COMBINE ALL TMEAN##############################################
+
+do.call(c,
+        list(final_predict_Tmean_har2, final_predict_Tmean_har3_A)) -&gt; Tmean_final_predictions
+# prediction validation check
+length(names(Tmean_final_predictions))
+</code></pre><p>-TMAX MODELS</p>
+<pre tabindex="0"><code>Tmax_har3_A_residuals_ln &lt;-
+  Tmax_residual_models[names(best_model_TMax_ln[1:5])]
+Tmax_har3_A_model_ln &lt;-
+  Tmax_final_model[names(best_model_TMax_ln[1:5])]
+mapply(predict_har3_A,
+       Tmax_har3_A_residuals_ln,
+       Tmax_har3_A_model_ln,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmax_ln_har3_A
+#####################################################################
+Tmax_har2_residuals_ln &lt;-
+  Tmax_residual_models[names(best_model_TMax_ln[c(6, 8)])]
+Tmax_har2_model_ln &lt;-
+  Tmax_final_model[names(best_model_TMax_ln[c(6, 8)])]
+mapply(predict_har2,
+       Tmax_har2_residuals_ln,
+       Tmax_har2_model_ln,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmax_ln_har2
+#####################################################################
+
+Tmax_har4_residuals_ln &lt;-
+  Tmax_residual_models[names(best_model_TMax_ln[c(7)])]
+Tmax_har4_model_ln &lt;-
+  Tmax_final_model[names(best_model_TMax_ln[c(7)])]
+mapply(predict_har4,
+       Tmax_har4_residuals_ln,
+       Tmax_har4_model_ln,
+       1,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmax_ln_har4
+#####################################################################
+
+Tmax_har2_residuals_cb &lt;-
+  Tmax_residual_models[names(best_model_TMax_cubic)]
+Tmax_har2_model_cb &lt;- Tmax_final_model[names(best_model_TMax_cubic)]
+
+mapply(predict_har2,
+       Tmax_har2_residuals_cb,
+       Tmax_har2_model_cb,
+       3,
+       SIMPLIFY = FALSE) -&gt; final_predict_Tmax_cb_har2
+
+#######################COMBINE ALL TMAX##############################################
+
+do.call(
+  c,
+  list(
+    final_predict_Tmax_ln_har3_A,
+    final_predict_Tmax_ln_har2,
+    final_predict_Tmax_ln_har4,
+    final_predict_Tmax_cb_har2
+  )
+) -&gt; Tmax_final_predictions
+# prediction validation check
+length(names(Tmax_final_predictions))
+</code></pre><pre tabindex="0"><code>mapply(predict_test,
+       Tmin_test_residuals,
+       Tmin_test_model[sorted_district],
+       SIMPLIFY = FALSE) -&gt; Tmin_test_pred
+mapply(predict_test,
+       Tmean_test_residuals,
+       Tmean_test_model[sorted_district],
+       SIMPLIFY = FALSE) -&gt; Tmean_test_pred
+mapply(predict_test,
+       Tmax_test_residuals,
+       Tmax_test_model[sorted_district],
+       SIMPLIFY = FALSE) -&gt; Tmax_test_pred
+</code></pre><h3 id="54-model-comparison">5.4 Model Comparison<a hidden class="anchor" aria-hidden="true" href="#54-model-comparison">#</a></h3>
+<p>We will be evaluating the accuracy of our predictions using the accuracy
+function of the forecast library, we used the subsetted time series of
+2020 data for all our time series as the actual while outcome of our
+predictions for 2020 as the predicted. We are going to observe our
+models performance with unseen data not used when fitting the model. The
+mapply function was used to apply the model_accuracy function across all
+our different time series predictions for best test and final.</p>
+<pre tabindex="0"><code>model_accuracy &lt;- function(y.pred, y.ts) {
+  y.actual &lt;- window(y.ts, start = 2020)
+  accuracy(y.pred, y.actual)
+}
+</code></pre><pre tabindex="0"><code>mapply(model_accuracy, Tmin_final_predictions[sorted_district], Tmin[sorted_district], SIMPLIFY = FALSE) -&gt; Tmin_accuracy
+mapply(model_accuracy, Tmean_final_predictions[sorted_district], Tmean[sorted_district], SIMPLIFY = FALSE) -&gt; Tmean_accuracy
+mapply(model_accuracy, Tmax_final_predictions[sorted_district], Tmax[sorted_district], SIMPLIFY = FALSE) -&gt; Tmax_accuracy
+</code></pre><pre tabindex="0"><code>mapply(model_accuracy, Tmin_test_pred[sorted_district], Tmin[sorted_district], SIMPLIFY = FALSE) -&gt; Tmin_accuracy_test
+mapply(model_accuracy, Tmean_test_pred[sorted_district], Tmean[sorted_district], SIMPLIFY = FALSE) -&gt; Tmean_accuracy_test
+mapply(model_accuracy, Tmax_test_pred[sorted_district], Tmax[sorted_district], SIMPLIFY = FALSE) -&gt; Tmax_accuracy_test
+</code></pre><pre tabindex="0"><code>get_rmse&lt;-function(x,y){
+  y[[x]][2]-&gt; a
+  
+  return(a)
+}
+</code></pre><pre tabindex="0"><code>#function to get rmse of all time series 
+get_all_rmse &lt;- function(Tmin,Tmean,Tmax){
+  
+  lapply(names(Tmin), get_rmse,y=Tmin) %&gt;%  set_names(names(Tmin)) %&gt;% as.data.frame() %&gt;% t() %&gt;% as.data.frame() %&gt;% set_names(&#34;Tmin_rmse&#34;) -&gt; Tmin_rmse
+lapply(names(Tmean), get_rmse,y=Tmean) %&gt;%  set_names(names(Tmean)) %&gt;% as.data.frame() %&gt;% t() %&gt;% as.data.frame() %&gt;% set_names(&#34;Tmean_rmse&#34;) -&gt; Tmean_rmse
+lapply(names(Tmax), get_rmse,y=Tmax) %&gt;%  set_names(names(Tmax)) %&gt;% as.data.frame() %&gt;% t() %&gt;% as.data.frame() %&gt;% set_names(&#34;Tmax_rmse&#34;) -&gt; Tmax_rmse
+
+return(cbind(Tmin_rmse,Tmean_rmse,Tmax_rmse))
+  
+}
+</code></pre><p>We observe the rmse for our models below, we can see the rmse for both
+the test model and final model, we observed that for some regions the
+test model performed better than the final model according to the rmse
+figures in the tables below.</p>
+<pre tabindex="0"><code>get_all_rmse(Tmin_accuracy,Tmean_accuracy,Tmax_accuracy) 
+</code></pre><pre tabindex="0"><code>get_all_rmse(Tmin_accuracy_test,Tmean_accuracy_test,Tmax_accuracy_test) 
+</code></pre><p><img loading="lazy" src="compare1.png" alt="compare1"  />
+
+<img loading="lazy" src="compare2.png" alt="compare2"  />
+</p>
+<p>We focused our analysis on the values from the test model predictions,
+final model predictions and the actual predictions for the South wales
+and North wales region, a plot was implemented and we observe that the
+plots are similar for the three different variables for north and south
+wales.</p>
+<pre tabindex="0"><code>Tmin_test_pred$England_NW_and_N_Wales %&gt;%  as.data.frame()  %&gt;% set_names(&#34;test_predictions&#34;)-&gt; test_N_wales
+Tmin_final_predictions$England_NW_and_N_Wales %&gt;%  as.data.frame() %&gt;% set_names(&#34;final_predictions&#34;) -&gt; final_N_wales
+Tmin$England_NW_and_N_Wales %&gt;% window(start = 2020) -&gt; England_NW_and_N_Wales_actual
+England_NW_and_N_Wales_actual %&gt;% as.data.frame()%&gt;%  set_names(&#34;Actual&#34;) -&gt; actual_N_wales
+cbind.data.frame(test_N_wales,final_N_wales,actual_N_wales)
+</code></pre><p><img loading="lazy" src="compare4.png" alt="compare3"  />
+
+<img loading="lazy" src="compare4.png" alt="compare4"  />
+</p>
+<pre tabindex="0"><code>Tmin_test_pred$England_SW_and_S_Wales %&gt;%  as.data.frame()  %&gt;% set_names(&#34;test_predictions&#34;)-&gt; test_S_wales
+Tmin_final_predictions$England_SW_and_S_Wales %&gt;%  as.data.frame() %&gt;% set_names(&#34;final_predictions&#34;) -&gt; final_S_wales
+Tmin$England_SW_and_S_Wales %&gt;% window(start = 2020) -&gt; England_SW_and_S_Wales_actual
+England_SW_and_S_Wales_actual %&gt;% as.data.frame()%&gt;%  set_names(&#34;Actual&#34;) -&gt; actual_S_wales
+cbind.data.frame(test_S_wales,final_S_wales,actual_S_wales)
+</code></pre><pre tabindex="0"><code>par(mfrow=c(3,3))
+plot(test_N_wales,main = &#34;Test predictions North wales&#34;)
+plot(final_N_wales,main = &#34;Final predictions North wales&#34;)
+plot(actual_N_wales,main = &#34;Actual North wales&#34;)
+plot(test_S_wales,main = &#34;Test predictions South wales&#34;)
+plot(final_S_wales,main = &#34;Final predictions South wales&#34;)
+plot(actual_S_wales,main = &#34;Actual predictions South wales&#34;)
+</code></pre><p><img loading="lazy" src="final.png" alt="final"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+<div class="share-buttons">
+    <a target="_blank" rel="noopener noreferrer" aria-label="share UK Weather Time series analysis on twitter"
+        href="https://twitter.com/intent/tweet/?text=UK%20Weather%20Time%20series%20analysis&amp;url=https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f&amp;hashtags=">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share UK Weather Time series analysis on linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f&amp;title=UK%20Weather%20Time%20series%20analysis&amp;summary=UK%20Weather%20Time%20series%20analysis&amp;source=https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share UK Weather Time series analysis on reddit"
+        href="https://reddit.com/submit?url=https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f&title=UK%20Weather%20Time%20series%20analysis">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share UK Weather Time series analysis on facebook"
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share UK Weather Time series analysis on whatsapp"
+        href="https://api.whatsapp.com/send?text=UK%20Weather%20Time%20series%20analysis%20-%20https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+        </svg>
+    </a>
+    <a target="_blank" rel="noopener noreferrer" aria-label="share UK Weather Time series analysis on telegram"
+        href="https://telegram.me/share/url?text=UK%20Weather%20Time%20series%20analysis&amp;url=https%3a%2f%2fmuizzkolapo.github.io%2fblog%2fdocs%2fweather_analysis%2f">
+        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+            <path
+                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+        </svg>
+    </a>
+</div>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://muizzkolapo.github.io/blog/">Muizzkolapo</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

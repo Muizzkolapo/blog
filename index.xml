@@ -63,5 +63,14 @@
 #loading package manager require(pacman) ## Loading required package: pacman #using p_load function to load all packages used pacman::p_load(tidyverse,tidytext,stringr,tidytext,textdata,stats, reshape2,modeltools,topicmodels,tm,widyr,anytime,rtweet, leaflet,lubridate,lutz,glue,scales,twitteR,wordcloud,igraph,ggraph) Problem statement Four tasks were performed on the airline tweet dataset provided including Text mining, Sentiment Analysis, Topic Model and Additional Exploratory Analysis.</description>
     </item>
     
+    <item>
+      <title>UK Weather Time series analysis</title>
+      <link>https://muizzkolapo.github.io/blog/docs/weather_analysis/</link>
+      <pubDate>Sat, 04 Mar 2023 09:13:17 +0000</pubDate>
+      
+      <guid>https://muizzkolapo.github.io/blog/docs/weather_analysis/</guid>
+      <description>Abstract Forecasting temperature by the use of advance statistical tools is very important in understanding and dealing with the effects of rising or decreasing temperatures. This study uses Time series analysis and predictions, a statistical methods to analyze and forecast temperatures, by using the average max, min and mean temperature for each month of different regions in the United Kingdom measured by the Met Office. The increase in concerns about the effects of rising or decreasing temperature on humans, animals, the climate, oceans, and seasonal patterns provokes the need for accurate models for forecasting the temperatures of the different regions across the globe.</description>
+    </item>
+    
   </channel>
 </rss>
