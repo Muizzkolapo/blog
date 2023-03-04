@@ -2,3 +2,56 @@ baseURL: "https://muizzkolapo.github.io/blog/"
 languageCode: en-us
 title: Muizzkolapo
 theme: PaperMod
+
+
+enableEmoji: true
+
+params:
+  author: Muizz Kp
+  homeInfoParams:
+    Title: "Some data guy"
+    Content: >
+      Welcome to the **Random musings of a data guy** 🎉
+
+      - This space shares step-by-step guides for devs to building different backend/infra projects 🙂
+
+      - 
+
+      - Things I generally think about:
+
+      - • data
+
+      - • dbt
+
+      - • data engineering
+
+      - • Data science
+
+      - • MLops
+
+
+  socialIcons:
+    - name: Github
+      url: "https://github.com/muizzlateef"
+    - name: Linkedin
+      url: "https://www.linkedin.com/in/muizzlateef/"
+    - name: Rss
+      url: "index.xml"
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
