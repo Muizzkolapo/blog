@@ -1,37 +1,10 @@
-   
+---
 title: "Twitter data mining of airline related tweets"
 date: 2023-03-04T09:13:17Z
 draft: false
-
-
-
-ReadMe  
-(1) For optimum performance of the code below ensure the following packages and libraries are installed and loaded to your Workspace.  
-
-*   tidytext
-*   stringr
-*   tidytext
-*   textdata
-*   stats
-*   reshape2
-*   modeltools
-*   topicmodels
-*   tm
-*   widyr
-*   anytime
-*   rtweet
-*   leaflet
-*   lubridate
-*   lutz
-*   glue
-*   scales
-*   twitteR
-*   wordcloud
-*   igraph
-*   ggraph
-
-2.  Ensure you run the code from Top to bottom as the content of the variable might change depending on the line of code been worked on.  
+--- 
     
+
 
 Loading all packages needed using the package manager
 =====================================================
